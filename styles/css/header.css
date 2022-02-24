@@ -1,0 +1,124 @@
+*{
+
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+
+    background-color:#eee;
+
+}
+
+ul{
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    list-style: none;
+
+    background-color: #8dd35fff;
+
+}
+
+li > p {
+
+    margin: 0 10px;
+
+    height: 12pt;
+
+    font-size: 12pt;
+
+    font-family: 'comfortaa';
+    font-weight: bolder;
+
+    color: white;
+
+}
+
+li{
+
+    min-width: 150px;
+
+    display: flex;
+
+    justify-content: space-around;
+
+}
+
+li > form > button{
+
+    height: 60px;
+    min-width: 100px;
+
+    border: none;
+    background-color:transparent;
+
+    font-size: 11pt;
+    font-family: comfortaa;
+
+    color: white;
+
+}
+
+.iniciarSesion{
+
+    margin: 0 30px;
+
+    width: 160px;
+    height: 40px;
+
+    background-color: #011627ff;
+
+    border-radius: 15px;
+
+    font-weight: bolder;
+
+    color: white;
+
+    text-decoration: underline transparent;
+
+}
+
+.busqueda{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.busqueda input{
+
+    width: 150px;
+    height: 30px;
+
+    padding: 0 15px;
+
+    font-family: comfortaa;
+
+    border: none;
+
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+
+    color: #011627ff;
+
+}
+
+.busqueda button{
+
+    width: 100px;
+    height: 30px;
+
+    border: none;
+
+    background-color: #011627ff;
+
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+}

@@ -1,0 +1,115 @@
+body{
+
+    background-color:#eee;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+main{
+
+    min-height: 700px;
+    width: 50%;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-self: center;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: white;
+
+}
+
+main > h1{
+
+    width: 400px;
+
+    margin-bottom: 50px;
+
+    font-size: 20pt;
+    font-family: comfortaa;
+
+    text-decoration: underline #8dd35fff;
+
+    text-align: center;
+
+    color: #011627ff;
+
+}
+
+main > h2{
+
+    width: 600px;
+    height: 30px;
+
+    padding: 0 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    font-size: 10pt;
+    font-family: comfortaa;
+    font-weight: bold;
+
+    color: #011627ff;
+
+    background-color: #8dd35fff;
+
+}
+
+main > p{
+
+    width: 600px;
+
+    min-height: 30px;
+
+    padding: 7px 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+
+    font-size: 10pt;
+    font-family: comfortaa;
+
+    color: #011627ff;
+
+    background-color: white;
+
+}
+
+main > form{
+
+    padding-top: 20px;
+
+}
+
+main > form > button{
+
+    width: 150px;
+    height: 30px;
+
+    background-color: #011627ff;
+
+    font-family: comfortaa;
+    font-size: 11pt;
+
+    border: none;
+
+    border-radius: 10px;
+
+    color: white;
+    
+    text-decoration: underline white;
+
+}

@@ -1,0 +1,160 @@
+body{
+
+    background-color:#eee;
+
+}
+
+main{
+
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 8fr 1fr;
+
+    grid-template-areas:
+
+    ". section ."
+    
+    ;
+
+}
+
+main > section{
+
+    grid-area: section;
+
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+section > h1{
+
+    padding-bottom: 20px;
+
+    font-size: 20pt;
+    font-family: Comfortaa;
+    font-weight: bold;
+
+    text-decoration: underline #8dd35fff;
+
+    color: #011627ff;
+
+}
+
+section > form > button{
+
+    margin-bottom: 30px;
+
+    width: 180px;
+    height: 30px;
+
+    font-family: comfortaa;
+    font-weight: bolder;
+
+    border: 1px solid white;
+    background-color: #011627ff;
+
+    color: white;
+
+}
+
+table{
+
+    border-collapse: collapse;
+
+}
+
+thead{
+
+    height: 40px;
+
+    font-size: 11pt;
+    font-family: comfortaa;
+
+    background-color: #8dd35fff;
+
+    color: white;
+
+}
+
+thead > tr{
+
+    width: 100px;
+
+}
+
+thead > tr > th{
+
+    padding: 5px;
+
+}
+
+tbody{
+
+    font-family: comfortaa;
+    font-size: 10pt;
+
+    background-color: white;
+
+}
+
+tbody > tr{
+
+    height: 40px;
+
+}
+
+tbody > tr > td{
+
+    padding: 15px;
+
+    text-align: center;
+
+}
+
+tbody > tr > td > form > button{
+
+    height: 30px;
+    width: 90%;
+    
+    font-family: comfortaa;
+
+    text-decoration: underline white;
+
+    border: none;
+
+    border-radius: 10px;
+
+    color: white;
+
+}
+
+.detalles{
+
+    min-width: 100px;
+
+    background-color: #8dd35fff;
+    
+}
+
+.modificar{
+
+    min-width: 100px;
+
+    background-color: #0682efff;
+    
+}
+
+.eliminar{
+
+    min-width: 100px;
+
+    background-color: #ff8080ff;
+    
+}

@@ -1,0 +1,41 @@
+footer{
+
+    width: 100%;
+    height: 60px;
+
+    background-color: #011627ff;
+
+}
+
+footer > section{
+
+    height: inherit;
+
+    padding: 0 30px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+footer > section > h2{
+
+    font-size: 11pt;
+
+    font-family: comfortaa;
+
+    color: white;
+
+}
+
+footer > section > p > a{
+
+    font-size: 10pt;
+
+    font-family: comfortaa;
+
+    color: white;
+
+}

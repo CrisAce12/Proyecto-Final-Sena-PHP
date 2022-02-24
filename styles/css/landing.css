@@ -1,0 +1,55 @@
+body{
+
+    background-color: #eee;
+
+}
+
+main{
+
+    height: 700px;
+
+    display: grid;
+
+    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-rows: 1fr 2fr 1fr;
+
+    grid-template-areas:
+
+    ". . ."
+    ". section ."
+    ". . ."
+    
+    ;
+
+}
+
+main > section{
+
+    grid-area: section;
+
+    display: flex;
+
+    flex-direction: column;
+    
+    justify-content: center;
+
+}
+
+main > section > h1{
+
+    font-size: 60pt;
+
+    font-family: 'Bebas neue';
+    font-weight: lighter;
+
+    color: #011627ff;
+
+}
+
+main > section > p{
+
+    font-size: 12pt;
+
+    font-family: comfortaa;
+
+}
