@@ -15,8 +15,7 @@
             <input type="text" id="accion" name="accion" value="insertar" hidden>
 
             <label for="nombreLibro">Nombre:</label>
-            <input type="text" name="nombreLibro" id="nombreLibro" required>
-            <br><br>                   
+            <input type="text" name="nombreLibro" id="nombreLibro" required>           
 
             <button type="submit" class="create">Crear Libro</button>
 

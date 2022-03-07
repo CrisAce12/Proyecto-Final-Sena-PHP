@@ -17,26 +17,26 @@
             <?php foreach($noticias as $noticia) : ?>
 
                 <p class="pTitulo">ID:</p>
-                <p>Valor Actual: <?=$noticia->id_noticia?></p>
+                <p><?=$noticia->id_noticia?></p>
                 <input type="text" name="idNoticia" id="idNoticia" value="<?=$noticia->id_noticia?>" hidden>
 
                 <p class="pTitulo">Nombre:</p>
-                <p>Valor Actual: <?=$noticia->nombre_notica?></p>
+                <p><?=$noticia->nombre_notica?></p>
                 <p class="pTitulo--Modificar">Modificar Nombre:</p>
                 <input type="text" name="nombreNoticia" id="nombreNoticia" value="<?=$noticia->nombre_notica?>">
 
                 <p class="pTitulo">Texto: </p>
-                <p>Valor Actual: <?=$noticia->texto_noticia?></p>
+                <p><?=$noticia->texto_noticia?></p>
                 <p class="pTitulo--Modificar">Modificar Texto:</p>
                 <input type="text" name="textoNoticia" id="textoNoticia" value="<?=$noticia->texto_noticia?>">
 
                 <p class="pTitulo">Fecha:</p>
-                <p>Valor Actual: <?=$noticia->fecha?></p>
+                <p><?=$noticia->fecha?></p>
                 <p class="pTitulo--Modificar">Modificar Fecha:</p>
                 <input type="text" id="fecha" name="fecha" value="<?=$noticia->fecha?>">
 
                 <p class="pTitulo">Estado:</p>
-                <p>Valor Actual: <?=$noticia->estado?></p>
+                <p><?=$noticia->estado?></p>
                 <p class="pTitulo--Modificar">Modificar Estado:</p>
                 <select name="estado" id="estado">
 
@@ -54,7 +54,7 @@
 
                             if($articulo->id_articulo == $noticia->id_articulo){
 
-                                echo 'Valor Actual:'.$articulo->nombre_articulo;
+                                echo $articulo->nombre_articulo;
 
                             }
 
@@ -83,7 +83,7 @@
 
                             if($tramite->id_tramite == $noticia->id_tramite){
 
-                                echo 'Valor Actual:'.$tramite->nombre_tramite;
+                                echo $tramite->nombre_tramite;
 
                             }
 

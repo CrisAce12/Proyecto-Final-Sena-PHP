@@ -17,21 +17,21 @@
             <?php foreach($articulos as $articulo) : ?>
 
                 <p class="pTitulo">ID Usuario:</p>
-                <p>Valor Actual: <?=$articulo->id_articulo?></p>
+                <p><?=$articulo->id_articulo?></p>
                 <input type="text" name="idArticulo" id="idArticulo" value="<?=$articulo->id_articulo?>" hidden>
 
                 <p class="pTitulo">Nombre:</p>
-                <p>Valor Actual: <?=$articulo->nombre_articulo?></p>
+                <p><?=$articulo->nombre_articulo?></p>
                 <p class="pTitulo--Modificar">Modificar Nombre:</p>
                 <input type="text" name="nombreArticulo" id="nombreArticulo" value="<?=$articulo->nombre_articulo?>">
 
                 <p class="pTitulo">Texto: </p>
-                <p>Valor Actual: <?=$articulo->texto_articulo?></p>
+                <p><?=$articulo->texto_articulo?></p>
                 <p class="pTitulo--Modificar">Modificar Texto:</p>
-                <textarea name="textoArticulo" id="textoArticulo" cols="200" rows="10"><?=$articulo->texto_articulo?></textarea>
+                <textarea name="textoArticulo" id="textoArticulo" cols="200" rows="20"><?=$articulo->texto_articulo?></textarea>
 
                 <p class="pTitulo">Estado:</p>
-                <p>Valor Actual: <?=$articulo->estado?></p>
+                <p><?=$articulo->estado?></p>
                 <p class="pTitulo--Modificar">Modificar Estado:</p>
                 <select name="estado" id="estado">
 
@@ -49,7 +49,7 @@
 
                             if($titulo->id_titulo == $articulo->id_titulo){
 
-                                echo 'Valor Actual: '.$titulo->nombre_titulo;
+                                echo $titulo->nombre_titulo;
 
                             }
 
@@ -78,7 +78,7 @@
 
                             if($libro->id_libro == $articulo->id_libro){
 
-                                echo 'Valor Actual: '.$libro->nombre_libro;
+                                echo $libro->nombre_libro;
 
                             }
 

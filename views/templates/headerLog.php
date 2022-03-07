@@ -117,9 +117,9 @@
 
                     <form action="landingController.php" method="POST">
 
-                        <input type="text" id="accion" name="accion" value="iniciarSesion" hidden>
+                        <input type="text" id="accion" name="accion" value="cerrarSesion" hidden>
                         
-                        <button type="submit" class="iniciarSesion">Iniciar Sesión</button>
+                        <button type="submit" class="cerrarSesion">Cerrar Sesión</button>
 
                     </form>
 

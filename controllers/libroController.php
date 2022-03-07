@@ -98,8 +98,7 @@
 
         require('../views/libro/index.php');
 
-    }  
-
+    }
     require('../views/templates/footer.php');
 
 ?>

@@ -59,7 +59,7 @@
                 $nombre_libro = $libro->getNombreLibro();
 
                 $preparedStatement = $connection->prepare("INSERT INTO libro (nombre_libro) VALUES ( ? );");
-                $preparedStatement->execute([$libro]);   
+                $preparedStatement->execute([$nombre_libro]);   
 
             }catch(Exception $e){
 

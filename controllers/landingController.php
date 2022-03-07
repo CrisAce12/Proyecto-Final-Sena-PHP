@@ -1,7 +1,6 @@
 <?php
-
     require('../views/templates/header.php');
-    
+
     if($_SERVER["REQUEST_METHOD"]=="POST"){
 
         $accion = strval($_POST['accion']);
@@ -13,13 +12,12 @@
         }
         elseif($accion == 'inicio'){
             
-            
             require('../views/index.php');
 
         }
         elseif($accion == 'libro'){
 
-            header("Location:tituloController.php");
+            header("Location:libroController.php");
 
         }
         elseif($accion == 'tramite'){

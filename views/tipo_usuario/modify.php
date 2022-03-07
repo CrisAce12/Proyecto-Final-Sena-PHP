@@ -17,11 +17,11 @@
             <?php foreach($tipos as $tipo) : ?>
 
                 <p class="pTitulo">ID:</p>
-                <p>Valor Actual: <?=$tipo->id_tusuario?></p>
+                <p><?=$tipo->id_tusuario?></p>
                 <input type="text" name="idTipoUsuario" id="idTipoUsuario" value="<?=$tipo->id_tusuario?>" hidden>
 
                 <p class="pTitulo">Nombre:</p>
-                <p>Valor Actual: <?=$tipo->nombre_tusuario?></p>
+                <p><?=$tipo->nombre_tusuario?></p>
                 <p class="pTitulo--Modificar">Modificar Nombre:</p>
                 <input type="text" name="nombreTipoUsuario" id="nombreTipoUsuario" value="<?=$tipo->nombre_tusuario?>">
 

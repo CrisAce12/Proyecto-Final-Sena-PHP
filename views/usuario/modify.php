@@ -17,21 +17,21 @@
             <?php foreach($usuarios as $usuario) : ?>
 
                 <p class="pTitulo">ID Usuario:</p>
-                <p>Valor Actual: <?=$usuario->id_usuario?></p>
+                <p><?=$usuario->id_usuario?></p>
                 <input type="text" name="idUsuario" id="idUsuario" value="<?=$usuario->id_usuario?>" hidden>
 
                 <p class="pTitulo">Nombre:</p>
-                <p>Valor Actual: <?=$usuario->nombre?></p>
+                <p><?=$usuario->nombre?></p>
                 <p class="pTitulo--Modificar">Modificar Nombre:</p>
                 <input type="text" name="nombre" id="nombre" value="<?=$usuario->nombre?>">
 
                 <p class="pTitulo">Correo Electrónico: </p>
-                <p>Valor Actual: <?=$usuario->email?></p>
+                <p><?=$usuario->email?></p>
                 <p class="pTitulo--Modificar">Modificar Correo:</p>
                 <input type="text" name="email" id="email" value="<?=$usuario->email?>">
 
                 <p class="pTitulo">Contraseña:</p>
-                <p>Valor Actual: <?=$usuario->contraseña?></p>
+                <p><?=$usuario->contraseña?></p>
                 <input type="text" id="contraseña" name="contraseña" value="<?=$usuario->contraseña?>" hidden>
 
                 <p class="pTitulo">Tipo de Usuario:</p>
@@ -43,7 +43,7 @@
 
                             if($rol->id_tusuario == $usuario->id_tusuario){
 
-                                echo 'Valor Actual: '.$rol->nombre_tusuario;
+                                echo $rol->nombre_tusuario;
 
                             }
 

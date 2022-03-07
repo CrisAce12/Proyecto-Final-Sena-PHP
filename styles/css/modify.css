@@ -91,9 +91,9 @@ main > section > form{
 section > form > p{
 
     width: 600px;
-    height: 30px;
+    min-height: 30px;
 
-    padding: 0 7px;
+    padding: 0px 7px;
 
     display: flex;
     align-items: center;
@@ -108,6 +108,12 @@ section > form > p{
 
     margin-bottom: 20px;
     
+}
+
+.p--long{
+
+    padding: 10px 7px;
+
 }
 
 section > form > input{
@@ -131,11 +137,9 @@ section > form > input{
 
 section > form > textarea{
 
-    min-width: 614px;
-    max-width: 614px;
-    height: 50px;
-    max-height: 350px;
-    min-height: 50px;
+    width: 594px;
+
+    padding: 10px;
 
     font-size: 10pt;
 

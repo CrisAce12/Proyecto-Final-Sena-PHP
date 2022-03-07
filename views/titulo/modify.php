@@ -17,11 +17,11 @@
             <?php foreach($titulos as $titulo) : ?>
 
                 <p class="pTitulo">ID:</p>
-                <p>Valor Actual: <?=$titulo->id_titulo?></p>
+                <p><?=$titulo->id_titulo?></p>
                 <input type="text" name="idTitulo" id="idTitulo" value="<?=$titulo->id_titulo?>" hidden>
 
                 <p class="pTitulo">Nombre:</p>
-                <p>Valor Actual: <?=$titulo->nombre_titulo?></p>
+                <p><?=$titulo->nombre_titulo?></p>
                 <p class="pTitulo--Modificar">Modificar Nombre:</p>
                 <input type="text" name="nombreTitulo" id="nombreTitulo" value="<?=$titulo->nombre_titulo?>">
 
@@ -34,7 +34,7 @@
 
                             if($libro->id_libro == $titulo->id_libro){
 
-                                echo 'Valor Actual:'.$libro->nombre_libro;
+                                echo $libro->nombre_libro;
 
                             }
 
