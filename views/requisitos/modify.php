@@ -36,13 +36,7 @@
 
         </form>
 
-        <form action="requisitosController.php">
-
-        <input type="text" name="accion" id="accion" value="" hidden>
-
-        <button type="submit">Volver</button>
-
-        </form>
+        <a href="requisitosController.php">Volver</a>
 
     </section>
 

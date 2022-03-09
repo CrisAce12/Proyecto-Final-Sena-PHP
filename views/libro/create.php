@@ -20,7 +20,6 @@
             <button type="submit" class="create">Crear Libro</button>
 
         </form>
-        <br><br>
         
         <form action="libroController.php">
 
@@ -29,6 +28,8 @@
             <button type="submit">Volver</button>
 
         </form>
+
+        <a href="libroController.php">Volver</a>
 
     </section>
 

@@ -12,13 +12,7 @@
 
         <h1>Libro | Inicio</h1>
 
-        <form action="libroController.php" method="POST">
-
-            <input type="text" name="accion" id="accion" value="crear" hidden>
-
-            <button type="submit">+ Añadir Libro</button>
-
-        </form>
+        <a href="libroController.php?accion=crear">+ Añadir Libro</a>
 
         <br>
 
@@ -48,44 +42,19 @@
                     <td><?= $libro->nombre_libro ?></td>
                     <td>
 
-                        <form action="libroController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="detalles" hidden>
-
-                            <input type="text" id="idLibro" name="idLibro" value="<?=$libro->id_libro?>" hidden>
-
-                            <button type="submit" class="detalles">Detalles</button>
-
-                        </form>
+                        <a href="libroController.php?accion=detalles&idLibro=<?=$libro->id_libro?>">Detalles</a>
 
                     </td>
                     <td>
 
-                        <form action="libroController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="modificar" hidden>
-
-                            <input type="text" id="idLibro" name="idLibro" value="<?=$libro->id_libro?>" hidden>
-
-                            <button type="submit" class="modificar">Modificar</button>
-
-                        </form>
+                        <a href="libroController.php?accion=modificar&idLibro=<?=$libro->id_libro?>">Modificar</a>
 
                     </td>
                     <td>
 
-                        <form action="libroController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="eliminar" hidden>
-
-                            <input type="text" id="idLibro" name="idLibro" value="<?=$libro->id_libro?>" hidden>
-
-                            <button type="submit" class="eliminar">Eliminar</button>
-
-                        </form>
+                        <a href="libroController.php?accion=eliminar&idLibro=<?=$libro->id_libro?>">Eliminar</a>
 
                     </td>
-                    
 
                 </tr>
 
@@ -98,3 +67,10 @@
     </section>
 
 </main>
+
+<form action="libroController.php" method="POST">
+
+    <input type="text" name="accion" value="invitado" required hidden>
+    <input type="submit" value="Vista invitado">
+
+</form>

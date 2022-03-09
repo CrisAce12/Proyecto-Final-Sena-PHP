@@ -29,75 +29,43 @@
 
                 <li>
 
-                <form action="landingController.php" method="POST">
-
-                    <input type="text" id="accion" name="accion" value="inicio" hidden>
-
-                    <button type="submit">Código de Policía Ya!</button>
-
-                </form>
+                    <a href="landingController.php?accion=inicio">Código de Policía Ya!</a>
 
                 </li>
 
                 <li>
 
-                    <form action="landingController.php" method="POST">
-
-                        <input type="text" id="accion" name="accion" value="inicio" hidden>
-                        
-                        <button type="submit">Inicio</button>
-
-                    </form>
+                    <a href="landingController.php?accion=inicio">Inicio</a>
 
                 </li>
 
                 <li>
 
-                    <form action="landingController.php" method="POST">
-
-                        <input type="text" id="accion" name="accion" value="libro" hidden>
-                        
-                        <button type="submit">Código</button>
-
-                    </form>
+                    <a href="articuloVista.php">Código</a>
 
                 </li>
 
                 <li>
 
-                    <form action="landingController.php" method="POST">
+                    <a href="tramiteVista.php">Trámites</a>
 
-                        <input type="text" id="accion" name="accion" value="tramite" hidden>
-                        
-                        <button type="submit">Trámites</button>
-
-                    </form>
-
-                </li>        
+                </li>  
                 
                 <li>
 
-                    <form action="landingController.php" method="POST">
-
-                        <input type="text" id="accion" name="accion" value="noticia" hidden>
-                        
-                        <button type="submit">Noticias</button>
-
-                    </form>
+                    <a href="noticiaVista.php">Noticias</a>
 
                 </li>
+
+                <?php if(isset($_SESSION['usuario'])):?>
 
                 <li>
 
-                    <form action="landingController.php" method="POST">
-
-                        <input type="text" id="accion" name="accion" value="usuario" hidden>
-                        
-                        <button type="submit">Usuario</button>
-
-                    </form>
+                    <a href="usuarioVista.php">Usuario</a>
 
                 </li>
+
+                <?php endif;?>
 
                 <li>
 
@@ -114,16 +82,32 @@
                 </li>
 
                 <li>
+                    
+                    <?php if(isset($_SESSION["usuario"])):?>
 
-                    <form action="landingController.php" method="POST">
+                        <a href="loginController.php?accion=logout">Cerrar Sesión</a>
 
-                        <input type="text" id="accion" name="accion" value="iniciarSesion" hidden>
-                        
-                        <button type="submit" class="iniciarSesion">Iniciar Sesión</button>
 
-                    </form>
+                    <?php else:?>
+
+                        <a href="loginController.php">Inicar Sesión</a>
+
+                    <?php endif;?>
 
                 </li>
+
+
+                <?php if(isset($_SESSION["usuario"])):?>
+
+                <?php else:?>
+
+                    <li>
+
+                        <a href="registerController.php">Registrarme</a>
+
+                    </li>
+
+                <?php endif;?>
 
             </ul>
 

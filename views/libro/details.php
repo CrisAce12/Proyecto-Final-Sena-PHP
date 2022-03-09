@@ -18,12 +18,6 @@
 
     <?php endforeach; ?>
 
-    <form action="libroController.php">
-
-        <input type="text" name="accion" id="accion" value="" hidden>
-
-        <button type="submit">Volver</button>
-
-    </form>
+    <a href="libroController.php">Volver</a>
 
 </main>

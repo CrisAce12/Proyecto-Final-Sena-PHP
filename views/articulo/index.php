@@ -12,13 +12,7 @@
 
         <h1>Artículo | Inicio</h1>
 
-        <form action="articuloController.php" method="POST">
-
-            <input type="text" name="accion" id="accion" value="crear" hidden>
-
-            <button type="submit">+ Añadir Artículo</button>
-
-        </form>
+        <a href="articuloController.php?accion=crear">+ Añadir Artículo</a>
 
         <br>
 
@@ -80,7 +74,7 @@
                             
                             foreach($titulos as $titulo){
 
-                                if($titulo->id_titulo==$titulo->id_titulo){
+                                if($articulo->id_titulo==$titulo->id_titulo){
 
                                     echo $titulo->nombre_titulo;
 
@@ -110,41 +104,17 @@
                     </td>
                     <td>
 
-                        <form action="articuloController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="detalles" hidden>
-
-                            <input type="text" id="idArticulo" name="idArticulo" value="<?=$articulo->id_articulo?>" hidden>
-
-                            <button type="submit" class="detalles">Detalles</button>
-
-                        </form>
+                        <a href="articuloController.php?accion=detalles&idArticulo=<?=$articulo->id_articulo?>">Detalles</a>
 
                     </td>
                     <td>
 
-                        <form action="articuloController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="modificar" hidden>
-
-                            <input type="text" id="idArticulo" name="idArticulo" value="<?=$articulo->id_articulo?>" hidden>
-
-                            <button type="submit" class="modificar">Modificar</button>
-
-                        </form>
+                        <a href="articuloController.php?accion=modificar&idArticulo=<?=$articulo->id_articulo?>">Modificar</a>
 
                     </td>
                     <td>
 
-                        <form action="articuloController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="eliminar" hidden>
-
-                            <input type="text" id="idArticulo" name="idArticulo" value="<?=$articulo->id_articulo?>" hidden>
-
-                            <button type="submit" class="eliminar">Eliminar</button>
-
-                        </form>
+                        <a href="articuloController.php?accion=eliminar&idArticulo=<?=$articulo->id_articulo?>">Eliminar</a>
 
                     </td>
                     

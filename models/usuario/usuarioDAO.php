@@ -134,6 +134,26 @@
 
         }
 
+        public function validarUsuario($emailUsuario,$contraseñaUsuario){
+
+            try{
+
+                $connector = new DBConnector();
+                $connection = $connector->getConnection();
+
+                $preparedStatement = $connection->prepare("SELECT id_usuario, nombre, email, contraseña, id_tusuario FROM usuario WHERE email = ? AND contraseña = ?;");
+                $preparedStatement->execute([$emailUsuario,$contraseñaUsuario]);
+
+                return $preparedStatement->fetchAll(PDO::FETCH_OBJ);
+
+            }catch(Exception $e){
+
+                $e->getMessage();
+
+            }
+
+        }
+
     }
 
 ?>

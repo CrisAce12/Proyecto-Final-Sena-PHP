@@ -12,13 +12,7 @@
 
         <h1>Título | Inicio</h1>
 
-        <form action="tituloController.php" method="POST">
-
-            <input type="text" name="accion" id="accion" value="crear" hidden>
-
-            <button type="submit">+ Añadir Título</button>
-
-        </form>
+        <a href="tituloController.php?accion=crear">+ Añadir Título</a>
 
         <br>
 
@@ -66,41 +60,17 @@
                     </td>
                     <td>
 
-                        <form action="tituloController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="detalles" hidden>
-
-                            <input type="text" id="idTitulo" name="idTitulo" value="<?=$titulo->id_titulo?>" hidden>
-
-                            <button type="submit" class="detalles">Detalles</button>
-
-                        </form>
+                        <a href="tituloController.php?accion=detalles&idTitulo=<?=$titulo->id_titulo?>">Detalles</a>
 
                     </td>
                     <td>
 
-                        <form action="tituloController.php" method="POST">
-
-                        <input type="text" id="accion" name="accion" value="modificar" hidden>
-
-                        <input type="text" id="idTitulo" name="idTitulo" value="<?=$titulo->id_titulo?>" hidden>
-
-                        <button type="submit" class="modificar">Modificar</button>
-
-                        </form>
+                        <a href="tituloController.php?accion=modificar&idTitulo=<?=$titulo->id_titulo?>">Modificar</a>
 
                     </td>
                     <td>
 
-                        <form action="tituloController.php" method="POST">
-
-                        <input type="text" id="accion" name="accion" value="eliminar" hidden>
-
-                        <input type="text" id="idTitulo" name="idTitulo" value="<?=$titulo->id_titulo?>" hidden>
-
-                        <button type="submit" class="eliminar">Elminiar</button>
-
-                        </form>
+                        <a href="tituloController.php?accion=eliminar&idTitulo=<?=$titulo->id_titulo?>">Eliminar</a>
 
                     </td>
                     

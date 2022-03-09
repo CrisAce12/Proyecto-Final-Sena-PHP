@@ -1,110 +1,137 @@
 <?php
 
+    session_start();
+
     require('../models/usuario/usuarioDAO.php');
     require('../views/templates/header.php');
 
     $usuarioDao = new UsuarioDao();
 
-    if($_SERVER["REQUEST_METHOD"]=="POST"){
+    if(isset($_SESSION['usuario'])){
 
-        $accion = strval($_POST["accion"]);
+        if($_SESSION['t_usuario']==1){
 
-        if($accion == null){
+            if($_SERVER["REQUEST_METHOD"]=="POST"){
 
-            $usuarios = $usuarioDao->listarUsuarios();
-    
-            require('../views/usuario/index.php');
-    
-        }
-    
-        elseif($accion == 'crear'){
-    
-            $roles = $usuarioDao->listarTiposUsuario();
-    
-            require('../views/usuario/create.php');
-    
-        }
-    
-        elseif($accion == 'insertar'){
-    
-            $arrayUsuario = array(
-    
-                "nombreUsuario" => $_POST["nombre"],
-                "emailUsuario" => $_POST["email"],
-                "contraseñaUsuario" => $_POST["contraseña"],
-                "idTipoUsuario" => $_POST["tipo_usuario"]
-    
-            );
-    
-            $usuario = new Usuario($arrayUsuario);
-    
-            $usuarioDao->insertarUsuario($usuario);
-            $usuarios = $usuarioDao->listarUsuarios();
-    
-            require('../views/usuario/index.php');
-    
-        }
-    
-        elseif($accion == 'detalles'){
-    
-            $id_usuario = $_POST['idUsuario'];
-    
-            $usuarios = $usuarioDao->mostrarUsuario($id_usuario);
-            $roles = $usuarioDao->listarTiposUsuario();
-    
-            require('../views/usuario/details.php');
-    
-        }
-    
-        elseif($accion == 'modificar'){
-    
-            $id_usuario = $_POST['idUsuario'];
-    
-            $usuarios = $usuarioDao->mostrarUsuario($id_usuario);
-            $roles = $usuarioDao->listarTiposUsuario();
-    
-            require('../views/usuario/modify.php');
-    
-        }
-    
-        else if($accion=="actualizar"){
-    
-            $arrayUsuario = array(
-    
-                "idUsuario" => $_POST["idUsuario"],
-                "nombreUsuario" => $_POST["nombre"],
-                "emailUsuario" => $_POST["email"],
-                "contraseñaUsuario" => $_POST["contraseña"],
-                "idTipoUsuario" => $_POST["tipo_usuario"]
+                $accion = strval($_POST["accion"]);
         
-            );
-    
-            $usuario = new Usuario($arrayUsuario);
-    
-            $usuarioDao->actualizarUsuario($usuario);
-            $usuarios = $usuarioDao->listarUsuarios();
+                if($accion == null){
+        
+                    $usuarios = $usuarioDao->listarUsuarios();
             
-            require("../views/usuario/index.php");        
-    
+                    require('../views/usuario/index.php');
+            
+                }
+                elseif($accion == 'insertar'){
+            
+                    $arrayUsuario = array(
+            
+                        "nombreUsuario" => $_POST["nombre"],
+                        "emailUsuario" => $_POST["email"],
+                        "contraseñaUsuario" => $_POST["contraseña"],
+                        "idTipoUsuario" => $_POST["tipo_usuario"]
+            
+                    );
+            
+                    $usuario = new Usuario($arrayUsuario);
+            
+                    $usuarioDao->insertarUsuario($usuario);
+                    $usuarios = $usuarioDao->listarUsuarios();
+            
+                    require('../views/usuario/index.php');
+            
+                }
+                else if($accion=="actualizar"){
+            
+                    $arrayUsuario = array(
+            
+                        "idUsuario" => $_POST["idUsuario"],
+                        "nombreUsuario" => $_POST["nombre"],
+                        "emailUsuario" => $_POST["email"],
+                        "contraseñaUsuario" => $_POST["contraseña"],
+                        "idTipoUsuario" => $_POST["tipo_usuario"]
+                
+                    );
+            
+                    $usuario = new Usuario($arrayUsuario);
+            
+                    $usuarioDao->actualizarUsuario($usuario);
+                    $usuarios = $usuarioDao->listarUsuarios();
+                    
+                    require("../views/usuario/index.php");        
+            
+                }
+        
+            }else{
+        
+                $accion = strval($_GET["accion"]);
+        
+                if($accion == null){
+        
+                    $usuarios = $usuarioDao->listarUsuarios();
+            
+                    require('../views/usuario/index.php');
+            
+                }
+                elseif($accion == 'crear'){
+            
+                    $roles = $usuarioDao->listarTiposUsuario();
+            
+                    require('../views/usuario/create.php');
+            
+                }
+                elseif($accion == 'detalles'){
+            
+                    $id_usuario = $_GET['idUsuario'];
+            
+                    $usuarios = $usuarioDao->mostrarUsuario($id_usuario);
+                    $roles = $usuarioDao->listarTiposUsuario();
+            
+                    require('../views/usuario/details.php');
+            
+                }
+                elseif($accion == 'modificar'){
+            
+                    $id_usuario = $_GET['idUsuario'];
+            
+                    $usuarios = $usuarioDao->mostrarUsuario($id_usuario);
+                    $roles = $usuarioDao->listarTiposUsuario();
+            
+                    require('../views/usuario/modify.php');
+            
+                }
+                else if($accion=="eliminar"){
+            
+                    $id_usuario = $_GET['idUsuario'];
+            
+                    $usuarioDao->borrarUsuario($id_usuario);
+            
+                    $usuarios = $usuarioDao->listarUsuarios();
+                    
+                    require("../views/usuario/index.php");        
+            
+                }
+                else{
+        
+                    $usuarios = $usuarioDao->listarUsuarios();
+            
+                    require('../views/usuario/index.php');
+        
+                }
+        
+            }
+
         }
-    
-        else if($accion=="eliminar"){
-    
-            $id_usuario = $_POST['idUsuario'];
-    
-            $usuarioDao->borrarUsuario($id_usuario);
-    
-            $usuarios = $usuarioDao->listarUsuarios();
-            
-            require("../views/usuario/index.php");        
-    
+        else{
+
+            header('Location:landingController.php');
+
         }
 
-    }else{
+    }
+    else{
 
-        $usuarios = $usuarioDao->listarUsuarios();
-    
-        require('../views/usuario/index.php');
+        header("Location:landingController.php");
 
     }
 

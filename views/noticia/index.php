@@ -12,13 +12,7 @@
 
         <h1>Noticia | Inicio</h1>
 
-        <form action="noticiaController.php" method="POST">
-
-            <input type="text" name="accion" id="accion" value="crear" hidden>
-
-            <button type="submit">+ Añadir Noticia</button>
-
-        </form>
+        <a href="noticiaController.php?accion=crear">+ Añadir Noticia</a>
 
         <br>
 
@@ -112,41 +106,17 @@
                     </td>                    
                     <td>
 
-                        <form action="noticiaController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="detalles" hidden>
-
-                            <input type="text" id="idNoticia" name="idNoticia" value="<?=$noticia->id_noticia?>" hidden>
-
-                            <button type="submit" class="detalles">Detalles</button>
-
-                        </form>
+                        <a href="noticiaController.php?accion=detalles&idNoticia=<?=$noticia->id_noticia?>">Detalles</a>
 
                     </td>
                     <td>
 
-                            <form action="noticiaController.php" method="POST">
-
-                                <input type="text" id="accion" name="accion" value="modificar" hidden>
-
-                                <input type="text" id="idNoticia" name="idNoticia" value="<?=$noticia->id_noticia?>" hidden>
-
-                                <button type="submit" class="modificar">Modificar</button>
-
-                            </form>
+                        <a href="noticiaController.php?accion=modificar&idNoticia=<?=$noticia->id_noticia?>">Modificar</a>
 
                     </td>
                     <td>
 
-                        <form action="noticiaController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="eliminar" hidden>
-
-                            <input type="text" id="idNoticia" name="idNoticia" value="<?=$noticia->id_noticia?>" hidden>
-
-                            <button type="submit" class="eliminar">Eliminar</button>
-
-                        </form>
+                        <a href="noticiaController.php?accion=eliminar&idNoticia=<?=$noticia->id_noticia?>">Eliminar</a>
 
                     </td>
                     

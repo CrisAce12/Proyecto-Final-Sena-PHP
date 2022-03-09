@@ -48,13 +48,7 @@
         </form>
         <br><br>
         
-        <form action="tramiteController.php">
-
-            <input type="text" name="accion" id="accion" value="" hidden>
-
-            <button type="submit">Volver</button>
-
-        </form>
+        <a href="tramiteController.php">Volver</a>
 
     </section>
 

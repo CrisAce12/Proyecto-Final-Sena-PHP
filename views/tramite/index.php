@@ -12,13 +12,7 @@
 
         <h1>Trámites | Inicio</h1>
 
-        <form action="tramiteController.php" method="POST">
-
-            <input type="text" name="accion" id="accion" value="crear" hidden>
-
-            <button type="submit">+ Añadir Trámite</button>
-
-        </form>
+        <a href="tramiteController.php?accion=crear">+ Añadir Trámite</a>
 
         <br>
 
@@ -86,45 +80,20 @@
                     </td>
                     <td>
 
-                        <form action="tramiteController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="detalles" hidden>
-
-                            <input type="text" id="idTramite" name="idTramite" value="<?=$tramite->id_tramite?>" hidden>
-
-                            <button type="submit" class="detalles">Detalles</button>
-
-                        </form>
+                        <a href="tramiteController.php?accion=detalles&idTramite=<?=$tramite->id_tramite?>">Detalles</a>
 
                     </td>
                     <td>
 
-                        <form action="tramiteController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="modificar" hidden>
-
-                            <input type="text" id="idTramite" name="idTramite" value="<?=$tramite->id_tramite?>" hidden>
-
-                            <button type="submit" class="modificar">Modificar</button>
-
-                        </form>
+                        <a href="tramiteController.php?accion=modificar&idTramite=<?=$tramite->id_tramite?>">Modificar</a>
 
                     </td>
                     <td>
 
-                        <form action="tramiteController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="eliminar" hidden>
-
-                            <input type="text" id="idTramite" name="idTramite" value="<?=$tramite->id_tramite?>" hidden>
-
-                            <button type="submit" class="eliminar">Eliminar</button>
-
-                        </form>
+                        <a href="tramiteController.php?accion=eliminar&idTramite=<?=$tramite->id_tramite?>">Eliminar</a>
 
                     </td>
                     
-
                 </tr>
 
                 <?php endforeach; ?>

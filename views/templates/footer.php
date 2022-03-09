@@ -3,8 +3,8 @@
     <section>
 
         <h2>Código de Policía Ya!</h2>
-    
-        <p><a href="">Política de Privacidad</a></p>
+
+        <a href="landingController.php?accion=privacidad">Política de Privacidad</a>
 
     </section>                
 

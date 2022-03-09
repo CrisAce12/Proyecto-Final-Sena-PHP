@@ -23,7 +23,7 @@
             <br><br>
 
             <label for="fecha">Fecha:</label>
-            <input type="text" name="fecha" id="fecha" required>
+            <input type="date" name="fecha" id="fecha" required>
             <br><br>
             
             <label for="estado">Estado: </label>
@@ -62,15 +62,8 @@
             <button type="submit" class="create">Crear Noticia</button>
 
         </form>
-        <br><br>
-        
-        <form action="noticiaController.php">
 
-            <input type="text" name="accion" id="accion" value="" hidden>
-
-            <button type="submit">Volver</button>
-
-        </form>
+        <a href="noticiaController.php">Volver</a>
 
     </section>
 

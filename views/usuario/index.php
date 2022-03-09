@@ -12,13 +12,7 @@
 
         <h1>Usuario | Inicio</h1>
 
-        <form action="usuarioController.php" method="POST">
-
-            <input type="text" name="accion" id="accion" value="crear" hidden>
-
-            <button type="submit">+ Añadir Usuario</button>
-
-        </form>
+        <a href="usuarioController.php?accion=crear">+ Añadir Usuario</a>
 
         <table>
 
@@ -74,41 +68,17 @@
                     </td>
                     <td>
 
-                        <form action="usuarioController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="detalles" hidden>
-
-                            <input type="text" id="idUsuario" name="idUsuario" value="<?=$usuario->id_usuario?>" hidden>
-
-                            <button type="submit" class="detalles">Detalles</button>
-
-                        </form>
+                        <a href="usuarioController.php?accion=detalles&idUsuario=<?=$usuario->id_usuario?>">Detalles</a>
 
                     </td>
                     <td>
 
-                        <form action="usuarioController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="modificar" hidden>
-
-                            <input type="text" id="idUsuario" name="idUsuario" value="<?=$usuario->id_usuario?>" hidden>
-
-                            <button type="submit" class="modificar">Modificar</button>
-
-                        </form>
+                        <a href="usuarioController.php?accion=modificar&idUsuario=<?=$usuario->id_usuario?>">Modificar</a>
 
                     </td>
                     <td>
 
-                        <form action="usuarioController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="eliminar" hidden>
-
-                            <input type="text" id="idUsuario" name="idUsuario" value="<?=$usuario->id_usuario?>" hidden>
-
-                            <button type="submit" class="eliminar">Eliminar</button>
-
-                        </form>
+                        <a href="usuarioController.php?accion=eliminar&idUsuario=<?=$usuario->id_usuario?>">Eliminar</a>
 
                     </td>
                     

@@ -77,7 +77,7 @@
                 $connector = new DBConnector();
                 $connection = $connector->getConnection();
 
-                $id_titulo = $titulo->getIdLibro();
+                $id_titulo = $titulo->getIdTitulo();
                 $nombre_titulo = $titulo->getNombreTitulo();
                 $id_libro  = $titulo->getIdLibro();
 

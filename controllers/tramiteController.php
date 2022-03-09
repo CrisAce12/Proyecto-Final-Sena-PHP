@@ -1,128 +1,127 @@
 <?php
 
+    session_start();
+
     require('../models/tramite/tramiteDAO.php');
     require('../views/templates/header.php');
 
     $tramiteDao = new TramiteDao();
 
-    if($_SERVER["REQUEST_METHOD"]=="POST"){
+    $tramites = $tramiteDao->listarTramites();
+    $requisitos = $tramiteDao->listarRequisitos();
+    $articulos = $tramiteDao->listarArticulos();
 
-        $accion = strval($_POST["accion"]);
+    if(isset($_SESSION['usuario'])){
 
-        if($accion == null){
+        if($_SESSION['t_usuario']==1){
 
-            $tramites = $tramiteDao->listarTramites();
+            if($_SERVER["REQUEST_METHOD"]=="POST"){
 
-            $requisitos = $tramiteDao->listarRequisitos();
-            $articulos = $tramiteDao->listarArticulos();
-
-            require('../views/tramite/index.php');
-
-        }
-
-        elseif($accion == 'crear'){
-
-            $requisitos = $tramiteDao->listarRequisitos();
-            $articulos = $tramiteDao->listarArticulos();
-
-            require('../views/tramite/create.php');
-
-        }
-
-        elseif($accion == 'insertar'){
-
-            $arrayTramite = array(
-
-                "nombreTramite" => $_POST["nombreTramite"],
-                "textoTramite" => $_POST["textoTramite"],
-                "idRequisito" => $_POST["idRequisito"],
-                "idArticulo" => $_POST["idArticulo"]
-
-            );
-
-            $tramite = new Tramite($arrayTramite);
-            
-            $tramiteDao->insertarTramite($tramite);
-            $tramites = $tramiteDao->listarTramites();
-
-            $requisitos = $tramiteDao->listarRequisitos();
-            $articulos = $tramiteDao->listarArticulos();
-
-            require('../views/tramite/index.php');
-
-        }
-
-        elseif($accion == 'detalles'){
-
-            $id_tramite = $_POST['idTramite'];
-
-            $tramites = $tramiteDao->mostrarTramite($id_tramite);
-            $requisitos = $tramiteDao->listarRequisitos();
-            $articulos = $tramiteDao->listarArticulos();
-
-            require('../views/tramite/details.php');
-
-        }
-
-        elseif($accion == 'modificar'){
-
-            $id_tramite = $_POST['idTramite'];
-
-            $tramites = $tramiteDao->mostrarTramite($id_tramite);
-            $requisitos = $tramiteDao->listarRequisitos();
-            $articulos = $tramiteDao->listarArticulos();
-
-            require('../views/tramite/modify.php');
-
-        }
-
-        else if($accion=="actualizar"){
-
-            $arrayTramite = array(
-
-                "idTramite" => $_POST["idTramite"],
-                "nombreTramite" => $_POST["nombreTramite"],
-                "textoTramite" => $_POST["textoTramite"],
-                "idRequisito" => $_POST["idRequisito"],
-                "idArticulo" => $_POST["idArticulo"]
+                $accion = strval($_POST["accion"]);
         
-            );
-
-            $tramite = new Tramite($arrayTramite);
-
-            $tramiteDao->actualizarTramite($tramite);
-            $tramites = $tramiteDao->listarTramites();
-
-            $requisitos = $tramiteDao->listarRequisitos();
-            $articulos = $tramiteDao->listarArticulos();
-            
-            require("../views/tramite/index.php");        
+                if($accion == null){
+        
+                    require('../views/tramite/index.php');
+        
+                }
+                elseif($accion == 'insertar'){
+        
+                    $arrayTramite = array(
+        
+                        "nombreTramite" => $_POST["nombreTramite"],
+                        "textoTramite" => $_POST["textoTramite"],
+                        "idRequisito" => $_POST["idRequisito"],
+                        "idArticulo" => $_POST["idArticulo"]
+        
+                    );
+        
+                    $tramite = new Tramite($arrayTramite);
+                    
+                    $tramiteDao->insertarTramite($tramite);
+        
+                    require('../views/tramite/index.php');
+        
+                }
+                else if($accion=="actualizar"){
+        
+                    $arrayTramite = array(
+        
+                        "idTramite" => $_POST["idTramite"],
+                        "nombreTramite" => $_POST["nombreTramite"],
+                        "textoTramite" => $_POST["textoTramite"],
+                        "idRequisito" => $_POST["idRequisito"],
+                        "idArticulo" => $_POST["idArticulo"]
+                
+                    );
+        
+                    $tramite = new Tramite($arrayTramite);
+        
+                    $tramiteDao->actualizarTramite($tramite);
+                    
+                    require("../views/tramite/index.php");        
+        
+                }
+        
+            }else{
+        
+                $accion = strval($_GET["accion"]);
+        
+                if($accion == null){
+        
+                    require('../views/tramite/index.php');
+        
+                }
+                elseif($accion == 'crear'){
+        
+                    require('../views/tramite/create.php');
+        
+                }
+                elseif($accion == 'detalles'){
+        
+                    $id_tramite = $_GET['idTramite'];
+        
+                    $tramites = $tramiteDao->mostrarTramite($id_tramite);
+        
+                    require('../views/tramite/details.php');
+        
+                }
+                elseif($accion == 'modificar'){
+        
+                    $id_tramite = $_GET['idTramite'];
+        
+                    $tramites = $tramiteDao->mostrarTramite($id_tramite);
+        
+                    require('../views/tramite/modify.php');
+        
+                }
+                else if($accion=="eliminar"){
+        
+                    $id_tramite = $_GET['idTramite'];
+        
+                    $tramiteDao->borrarTramite($id_tramite);
+                    
+                    require("../views/tramite/index.php");        
+        
+                }
+                else{
+        
+                    require('../views/tramite/index.php');
+        
+                }        
+        
+            }
 
         }
+        else{
 
-        else if($accion=="eliminar"){
-
-            $id_tramite = $_POST['idTramite'];
-
-            $tramiteDao->borrarTramite($id_tramite);
-
-            $tramites = $tramiteDao->listarTramites();
-
-            $requisitos = $tramiteDao->listarRequisitos();
-            $articulos = $tramiteDao->listarArticulos();
-            
-            require("../views/tramite/index.php");        
+            header("Location:tramiteVista.php");
 
         }
+        
+    }
+    else{
 
-    }else{
-
-        $tramites = $tramiteDao->listarTramites();
-
-        $requisitos = $tramiteDao->listarRequisitos();
-        $articulos = $tramiteDao->listarArticulos();
-
-        require('../views/tramite/index.php');
+        header("Location:landingController.php");
 
     }
 

@@ -1,49 +1,65 @@
 <?php
+    
+    session_start();
+
     require('../views/templates/header.php');
 
     if($_SERVER["REQUEST_METHOD"]=="POST"){
 
         $accion = strval($_POST['accion']);
-
-        if($accion == null || $accion == ''){
-
-            require('../views/index.php');
-    
-        }
-        elseif($accion == 'inicio'){
-            
-            require('../views/index.php');
-
-        }
-        elseif($accion == 'libro'){
-
-            header("Location:libroController.php");
-
-        }
-        elseif($accion == 'tramite'){
-
-            header("Location:tramiteController.php");
-
-        }
-        elseif($accion == 'noticia'){
-
-            header("Location:noticiaController.php");
-
-        }
-        elseif($accion == 'usuario'){
-
-            header("Location:usuarioController.php");
-
-        }
-        elseif($accion == 'buscar'){
+        
+        if($accion == 'buscar'){
 
             
+
+        }else {
+            
+            require('../views/index.php');
 
         }
 
     }else{
 
-        require('../views/index.php');
+        $accion = strval($_GET['accion']);
+
+        switch ($accion) {
+            
+            case 'inicio':
+                require('../views/index.php');
+            break; 
+            
+            case 'libro':
+                header("Location:libroController.php");
+            break;    
+
+            case 'tramite':
+                header("Location:tramiteController.php");
+            break;    
+
+            case 'noticia':
+                header("Location:noticiaController.php");
+            break;    
+
+            case 'usuario':
+                header("Location:usuarioController.php");
+            break;
+            
+            case 'login':
+                header("Location:loginController.php");
+            break;
+
+            case 'registro':
+                header("Location:registerController.php");
+            break;
+
+            case 'privacidad':
+                require('../views/privacyPolicy/index.php');
+            break;
+
+            default:
+                require('../views/index.php');
+                break;
+        }
 
     }
 

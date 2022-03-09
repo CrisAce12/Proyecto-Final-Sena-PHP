@@ -12,13 +12,7 @@
 
         <h1>Requisitos | Inicio</h1>
 
-        <form action="requisitosController.php" method="POST">
-
-            <input type="text" name="accion" id="accion" value="crear" hidden>
-
-            <button type="submit">+ Añadir Requisito</button>
-
-        </form>
+        <a href="requisitosController.php?accion=crear">+ Añadir Requisito</a>
 
         <br>
 
@@ -50,41 +44,17 @@
                     <td><?= $requisito->descripcion_requisito ?></td>
                     <td>
 
-                        <form action="requisitosController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="detalles" hidden>
-
-                            <input type="text" id="idRequisitos" name="idRequisitos" value="<?=$requisito->id_requisito?>" hidden>
-
-                            <button type="submit" class="detalles">Detalles</button>
-
-                        </form>
+                        <a href="requisitosController.php?accion=detalles&idRequisitos=<?=$requisito->id_requisito?>">Detalles</a>
 
                     </td>
                     <td>
 
-                        <form action="requisitosController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="modificar" hidden>
-
-                            <input type="text" id="idRequisitos" name="idRequisitos" value="<?=$requisito->id_requisito?>" hidden>
-
-                            <button type="submit" class="modificar">Modificar</button>
-
-                        </form>
+                        <a href="requisitosController.php?accion=modificar&idRequisitos=<?=$requisito->id_requisito?>">Modificar</a>
 
                     </td>
                     <td>
 
-                        <form action="requisitosController.php" method="POST">
-
-                            <input type="text" id="accion" name="accion" value="eliminar" hidden>
-
-                            <input type="text" id="idRequisitos" name="idRequisitos" value="<?=$requisito->id_requisito?>" hidden>
-
-                            <button type="submit" class="eliminar">Eliminar</button>
-
-                        </form> 
+                        <a href="requisitosController.php?accion=eliminar&idRequisitos=<?=$requisito->id_requisito?>">Eliminar</a>
 
                     </td>
                     
