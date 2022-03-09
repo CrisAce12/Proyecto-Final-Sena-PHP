@@ -3,7 +3,7 @@
     session_start();
 
     require('../models/usuario/usuarioDAO.php');
-    require('../views/templates/header.php');
+    
 
     $usuarioDao = new UsuarioDao();    
 
@@ -12,14 +12,18 @@
         session_unset();
         session_destroy();
 
+        require('../views/templates/header.php');
         require "../views/sesion/login/index.php";
 
     }
     elseif(isset($_SESSION['usuario'])){
 
+        require('../views/templates/header.php');
         header("Location:landingController.php");
 
     }else{
+
+        require('../views/templates/header.php');
 
         if($_SERVER["REQUEST_METHOD"]=="POST"){
 

@@ -1,3 +1,9 @@
+<?php
+
+    error_reporting(0);
+
+?>
+
 <!DOCTYPE html>
 
     <html lang="en">
@@ -23,49 +29,41 @@
 
     <header>
 
-        <nav class="nav">
+        <nav>
+
+            
 
             <ul>
 
                 <li>
 
-                    <a href="landingController.php?accion=inicio">Código de Policía Ya!</a>
+                    <a class="nav-link" href="landingController.php?accion=inicio"><div></div></a>
 
                 </li>
 
                 <li>
 
-                    <a href="landingController.php?accion=inicio">Inicio</a>
+                    <a class="nav-link" href="landingController.php?accion=inicio">Inicio</a>
 
                 </li>
 
                 <li>
 
-                    <a href="articuloVista.php">Código</a>
+                    <a class="nav-link" href="libroVista.php">Código</a>
 
                 </li>
 
                 <li>
 
-                    <a href="tramiteVista.php">Trámites</a>
+                    <a class="nav-link" href="tramiteVista.php">Trámites</a>
 
                 </li>  
-                
-                <li>
-
-                    <a href="noticiaVista.php">Noticias</a>
-
-                </li>
-
-                <?php if(isset($_SESSION['usuario'])):?>
 
                 <li>
 
-                    <a href="usuarioVista.php">Usuario</a>
+                    <a class="nav-link" href="noticiaVista.php">Noticias</a>
 
                 </li>
-
-                <?php endif;?>
 
                 <li>
 
@@ -85,12 +83,12 @@
                     
                     <?php if(isset($_SESSION["usuario"])):?>
 
-                        <a href="loginController.php?accion=logout">Cerrar Sesión</a>
+                        <a class="cerrarSesion" href="loginController.php?accion=logout" class="cerrarSesion">Cerrar Sesión</a>
 
 
                     <?php else:?>
 
-                        <a href="loginController.php">Inicar Sesión</a>
+                        <a class="iniciarSesion" href="loginController.php" class="iniciarSesion">Inicar Sesión</a>
 
                     <?php endif;?>
 
@@ -103,13 +101,25 @@
 
                     <li>
 
-                        <a href="registerController.php">Registrarme</a>
+                        <a class="registrarme" href="registerController.php" class="registrarme">Registrarme</a>
 
                     </li>
 
                 <?php endif;?>
 
+                <?php if(isset($_SESSION['usuario'])):?>
+
+                <li>
+
+                    <a class="miCuenta" href="usuarioVista.php">Mi Cuenta</a>
+
+                </li>
+
+                <?php endif;?>
+
             </ul>
+
+            </div>
 
         </nav>
 

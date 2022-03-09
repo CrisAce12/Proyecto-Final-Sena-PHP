@@ -1,0 +1,17 @@
+*{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+main{
+
+    width: 100%;
+    min-height: 750px;
+
+    background-color: #eee;
+
+    font-family: comfortaa;
+
+}

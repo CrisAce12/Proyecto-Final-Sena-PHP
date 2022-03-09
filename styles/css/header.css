@@ -13,6 +13,8 @@ body{
 
 ul{
 
+    height: 60px;
+
     display: flex;
 
     justify-content: center;
@@ -49,7 +51,33 @@ li{
 
 }
 
+li > a{
+
+    color: white;
+    font-family: 'comfortaa';
+    font-size: 11.5pt;
+    font-weight: bolder;
+
+    text-decoration: none;
+
+}
+
+li > a > div{
+
+    width: 140px;
+    height: 45px;
+
+    background-image: url("../images/logoTextoAzul.png");
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    image-rendering: optimizeQuality;
+
+}
+
 li > form > button{
+
+    margin-right: 10px;
 
     height: 60px;
     min-width: 100px;
@@ -66,7 +94,7 @@ li > form > button{
 
 .iniciarSesion{
 
-    margin: 0 30px;
+    margin: 0 25px;
 
     width: 160px;
     height: 40px;
@@ -80,6 +108,72 @@ li > form > button{
     color: white;
 
     text-decoration: underline transparent;
+    text-align: center;
+
+    line-height: 40px;
+
+}
+
+.registrarme{
+
+    width: 160px;
+    height: 40px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    font-weight: bolder;
+
+    color: #0682efff;
+
+    text-decoration: underline transparent;
+    text-align: center;
+
+    line-height: 40px;
+
+}
+
+.cerrarSesion{
+
+    margin: 0 25px;
+
+    width: 160px;
+    height: 40px;
+
+    background-color: #f7be2aff;
+
+    border-radius: 15px;
+
+    font-weight: bolder;
+
+    color: white;
+
+    text-decoration: underline transparent;
+    text-align: center;
+
+    line-height: 40px;
+
+}
+
+.miCuenta{
+
+    width: 160px;
+    height: 40px;
+
+    background-color: white;
+
+    border-radius: 15px;
+
+    font-weight: bolder;
+
+    color: #0682efff;
+
+    text-decoration: underline transparent;
+    text-align: center;
+
+    line-height: 40px;
+
 
 }
 
@@ -93,8 +187,10 @@ li > form > button{
 
 .busqueda input{
 
-    width: 150px;
-    height: 30px;
+    margin-left: 20px;
+
+    width: 180px;
+    height: 35px;
 
     padding: 0 15px;
 
@@ -112,7 +208,7 @@ li > form > button{
 .busqueda button{
 
     width: 100px;
-    height: 30px;
+    height: 35px;
 
     border: none;
 
