@@ -5,6 +5,12 @@
     require('../models/articulo/articuloDAO.php');
     require('../views/templates/header.php');
 
+    $articuloDao = new ArticuloDao();
+
+    $articulos = $articuloDao->listarArticulos();
+    $titulos = $articuloDao->listarTitulos();
+    $libros = $articuloDao->listarLibros();
+
 
     require('../views/articulo/indexUsuario.php');
 

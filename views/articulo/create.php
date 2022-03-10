@@ -1,6 +1,7 @@
 <head>
 
     <link rel="stylesheet" href="../styles/css/create.css">
+    <title>Código De Policía Ya! | Noticias</title>
 
 </head>
 

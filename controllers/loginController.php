@@ -53,7 +53,6 @@
                     }
                     else{
 
-                        echo "El correo y/o la clave ingresadas son incorrectas";
                         require "../views/sesion/login/index.php";
 
                     }
@@ -61,7 +60,6 @@
                 }
                 else{
 
-                    echo "El correo y/o la clave ingresadas son incorrectas";
                     require "../views/sesion/login/index.php";
 
                 }               

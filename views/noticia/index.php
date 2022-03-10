@@ -2,7 +2,7 @@
 
     <link rel="stylesheet" href="../styles/css/index.css">
 
-    <title>Noticias</title>
+    <title>Código De Policía Ya! | Noticias</title>
 
 </head>
 

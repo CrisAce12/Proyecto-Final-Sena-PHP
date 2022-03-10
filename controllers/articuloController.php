@@ -6,6 +6,10 @@
 
     $articuloDao = new ArticuloDao();
 
+    $articulos = $articuloDao->listarArticulos();
+    $titulos = $articuloDao->listarTitulos();
+    $libros = $articuloDao->listarLibros();
+
     if(isset($_SESSION['usuario'])){
 
         if($_SESSION['t_usuario']==1){

@@ -2,6 +2,8 @@
 
     <link rel="stylesheet" href="../styles/css/modify.css">
 
+    <title>Código De Policía Ya! | Título</title>
+
 </head>
 
 <main>

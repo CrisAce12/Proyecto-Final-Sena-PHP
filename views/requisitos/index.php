@@ -2,7 +2,7 @@
 
     <link rel="stylesheet" href="../styles/css/index.css">
 
-    <title>Requisitos</title>
+    <title>Código De Policía Ya! | Requisitos</title>
 
 </head>
 

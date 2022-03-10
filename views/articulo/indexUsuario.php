@@ -2,83 +2,47 @@
 
     <link rel="stylesheet" href="../styles/css/lectura/articulo.css">
 
+    <title>Código De Policía Ya! | Noticias</title>
+
 </head>
 
 <main>
 
     <section class="section1">
 
-        <h1>Libro 1 | Título 4</h1>
+        <h1><?php foreach($libros as $libro){if($libro->id_libro==$_GET['libroGet']){ echo $libro->nombre_libro;}}?> | <?php foreach($titulos as $titulo){if($titulo->id_titulo==$_GET['tituloGet']){ echo $titulo->nombre_titulo;}}?></h1>
 
-        <button><a href="tituloVista.php">Volver a Titulos</a></button>
+        <button><a href="tituloVista.php?libroGet=<?=$_GET['libroGet']?>">Volver a Titulos</a></button>
 
         <hr>
 
-        <div>
+        <?php
 
-            <h1>Nombre del Artículo</h1>
+            $idLibro = $_GET['libroGet'];
+            $idTitulo = $_GET['tituloGet'];
 
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros penatibus molestie bibendum feugiat vivamus, litora etiam nostra cubilia tempor dapibus duis sociosqu torquent, vulputate sagittis purus porta class tincidunt nec justo dictumst. Pulvinar dictum rhoncus elementum pellentesque inceptos sociis dui nec, turpis feugiat pretium porttitor proin integer luctus ut aptent, nascetur varius nisl at porta taciti tincidunt.</p>
+            foreach ($articulos as $articulo):
 
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros.</p>
+                if ($articulo->id_titulo==$idTitulo&&$articulo->id_libro==$idLibro):
 
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros penatibus molestie bibendum feugiat vivamus, litora etiam nostra cubilia tempor dapibus duis sociosqu torquent, vulputate sagittis purus porta class tincidunt nec justo dictumst. Pulvinar dictum rhoncus elementum pellentesque inceptos sociis dui nec, turpis feugiat pretium porttitor proin integer luctus ut aptent, nascetur varius nisl at porta taciti tincidunt.</p>
+                    ?> 
+                
+                        <div>
 
-        </div>
+                        <h1><?=$articulo->nombre_articulo?></h1>
 
-        <div>
+                        <p><?=$articulo->texto_articulo?></p>
 
-            <h1>Nombre del Artículo</h1>
+                        </div>
+                
+                    <?php
 
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros penatibus molestie bibendum feugiat vivamus, litora etiam nostra cubilia tempor dapibus duis sociosqu torquent, vulputate sagittis purus porta class tincidunt nec justo dictumst. Pulvinar dictum rhoncus elementum pellentesque inceptos sociis dui nec, turpis feugiat pretium porttitor proin integer luctus ut aptent, nascetur varius nisl at porta taciti tincidunt.</p>
+                endif;
 
-        </div>
-
-        <div>
-
-            <h1>Nombre del Artículo</h1>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros penatibus molestie bibendum feugiat vivamus, litora etiam nostra cubilia tempor dapibus duis sociosqu torquent, vulputate sagittis purus porta class tincidunt nec justo dictumst. Pulvinar dictum rhoncus elementum pellentesque inceptos sociis dui nec, turpis feugiat pretium porttitor proin integer luctus ut aptent, nascetur varius nisl at porta taciti tincidunt.</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros.</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros penatibus molestie bibendum feugiat vivamus, litora etiam nostra cubilia tempor dapibus duis sociosqu torquent, vulputate sagittis purus porta class tincidunt nec justo dictumst. Pulvinar dictum rhoncus elementum pellentesque inceptos sociis dui nec, turpis feugiat pretium porttitor proin integer luctus ut aptent, nascetur varius nisl at porta taciti tincidunt.</p>
-
-        </div>
-
-        <div>
-
-            <h1>Nombre del Artículo</h1>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros penatibus molestie bibendum feugiat vivamus, litora etiam nostra cubilia tempor dapibus duis sociosqu torquent, vulputate sagittis purus porta class tincidunt nec justo dictumst. Pulvinar dictum rhoncus elementum pellentesque inceptos sociis dui nec, turpis feugiat pretium porttitor proin integer luctus ut aptent, nascetur varius nisl at porta taciti tincidunt.</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros.</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros penatibus molestie bibendum feugiat vivamus, litora etiam nostra cubilia tempor dapibus duis sociosqu torquent, vulputate sagittis purus porta class tincidunt nec justo dictumst. Pulvinar dictum rhoncus elementum pellentesque inceptos sociis dui nec, turpis feugiat pretium porttitor proin integer luctus ut aptent, nascetur varius nisl at porta taciti tincidunt.</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros penatibus molestie bibendum feugiat vivamus, litora etiam nostra cubilia tempor dapibus duis sociosqu torquent, vulputate sagittis purus porta class tincidunt nec justo dictumst. Pulvinar dictum rhoncus elementum pellentesque inceptos sociis dui nec, turpis feugiat pretium porttitor proin integer luctus ut aptent, nascetur varius nisl at porta taciti tincidunt.</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros.</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros penatibus molestie bibendum feugiat vivamus, litora etiam nostra cubilia tempor dapibus duis sociosqu torquent, vulputate sagittis purus porta class tincidunt nec justo dictumst. Pulvinar dictum rhoncus elementum pellentesque inceptos sociis dui nec, turpis feugiat pretium porttitor proin integer luctus ut aptent, nascetur varius nisl at porta taciti tincidunt.</p>
-
-        </div>
-
-        <div>
-
-            <h1>Nombre del Artículo</h1>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros penatibus molestie bibendum feugiat vivamus, litora etiam nostra cubilia tempor dapibus duis sociosqu torquent, vulputate sagittis purus porta class tincidunt nec justo dictumst. Pulvinar dictum rhoncus elementum pellentesque inceptos sociis dui nec, turpis feugiat pretium porttitor proin integer luctus ut aptent, nascetur varius nisl at porta taciti tincidunt.</p>
-
-        </div>
-
-        <div>
-
-            <h1>Nombre del Artículo</h1>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipiscing elit diam, leo pulvinar aenean curae nam fames. Libero ad pretium a eu eros penatibus molestie bibendum feugiat vivamus, litora etiam nostra cubilia tempor dapibus duis sociosqu torquent, vulputate sagittis purus porta class tincidunt nec justo dictumst. Pulvinar dictum rhoncus elementum pellentesque inceptos sociis dui nec, turpis feugiat pretium porttitor proin integer luctus ut aptent, nascetur varius nisl at porta taciti tincidunt.</p>
-
-        </div>
+            endforeach;
+            
+            
+        ?>
 
     </section>
 

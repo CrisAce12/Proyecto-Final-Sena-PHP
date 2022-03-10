@@ -3,6 +3,8 @@
     <link rel="stylesheet" href="../styles/css/indexUsuario.css">
     <link rel="stylesheet" href="../styles/css/usuario/usuario.css">
 
+    <title>Código De Policía Ya! | Usuario</title>
+
 </head>
 
 <main>
@@ -17,19 +19,19 @@
 
                 <tr>
 
-                    <td>Nombre: EjemploUsuario23</td>
+                    <td>Nombre: <?=$_SESSION['usuario']?></td>
 
                 </tr>
 
                 <tr>
 
-                    <td>Correo Electrónico: ejemplo@ejemplo.com</td>
+                    <td>Correo Electrónico: <?=$_SESSION['correo']?></td>
 
                 </tr>
 
                 <tr>
 
-                    <td>Tipo de Usuario: Visitante</td>
+                    <td>Tipo de Usuario: <?php if($_SESSION['usuario']==2){echo "Administrador";}else{ echo "Usuario";}?></td>
 
                 </tr>
 

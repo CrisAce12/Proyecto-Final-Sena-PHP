@@ -1,6 +1,7 @@
 <head>
 
-    <link rel="stylesheet" href="../tests/modifyTEST.css">
+    <link rel="stylesheet" href="../styles/css/modify.css">
+    <title>Código De Policía Ya! | Trámite</title>
 
 </head>
 

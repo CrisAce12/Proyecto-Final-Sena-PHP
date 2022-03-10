@@ -2,6 +2,8 @@
 
     <link rel="stylesheet" href="../styles/css/register/register.css">
 
+    <title>Código De Policía Ya! | Inicio de Sesión</title>
+
 </head>
 
 <main>

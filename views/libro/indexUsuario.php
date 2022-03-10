@@ -3,41 +3,27 @@
     <link rel="stylesheet" href="../styles/css/indexUsuario.css">
     <link rel="stylesheet" href="../styles/css/usuario/libro.css">
 
+    <title>Código De Policía Ya! | Noticias</title>
+
 </head>
 
 <main>
 
     <section class="section1">
 
-        <div>
+        <?php $i=1;foreach($libros as $libro):?>
 
-            <h1>Libro 1</h1>
+            <div>
 
-            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit natoque diam.</p>
+                <h1>Libro <?=$i?></h1>
 
-            <button><a href="tituloVista.php">Ir Ahora</a></button>
+                <p><?=$libro->nombre_libro?></p>
 
-        </div>
+                <button><a href="tituloVista.php?libroGet=<?=$libro->id_libro?>">Ir Ahora</a></button>
 
-        <div>
+            </div>
 
-            <h1>Libro 2</h1>
-
-            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit natoque diam.</p>
-
-            <button><a href="tituloVista.php">Ir Ahora</a></button>
-
-        </div>
-
-        <div>
-
-            <h1>Libro 3</h1>
-
-            <p>Lorem ipsum dolor sit amet consectetur, adipiscing elit natoque diam.</p>
-
-            <button><a href="tituloVista.php">Ir Ahora</a></button>
-
-        </div>
+        <?php $i++; endforeach;?>
 
     </section>       
 
@@ -46,7 +32,5 @@
         <button><a href="landingController.php">Volver</a></button>
 
     </section>
-
-    
 
 </main>

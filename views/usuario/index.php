@@ -2,7 +2,7 @@
 
     <link rel="stylesheet" href="../styles/css/index.css">
 
-    <title>Usuarios</title>
+    <title>Código De Policía Ya! | Usuario</title>
 
 </head>
 

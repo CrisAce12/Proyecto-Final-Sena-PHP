@@ -3,53 +3,45 @@
     <link rel="stylesheet" href="../styles/css/indexUsuario.css">
     <link rel="stylesheet" href="../styles/css/usuario/titulo.css">
 
+    <title>Código De Policía Ya! | Título</title>
+
 </head>
 
 <main>
 
     <section class="section1">
 
-        <h1>Libro 1 | Títulos</h1>
+        <h1><?php foreach($libros as $libro){if($libro->id_libro==$_GET['libroGet']){ echo $libro->nombre_libro;}}?> | Títulos</h1>
 
-        <div>   
+        <?php foreach($libros as $libro):            
 
-            <p>Nombre Título</p>
+            if($libro->id_libro==$_GET['libroGet']){
 
-            <a href="articuloVista.php">Ir Ahora</a>
+                foreach($titulos as $titulo):
 
-        </div>
+                    $idTitulo = $titulo->id_titulo;
 
-        <div>   
+                    if ($titulo->id_libro==$libro->id_libro):
 
-            <p>Nombre Título</p>
+                        ?> 
+                    
+                            <div>   
 
-            <a href="articuloVista.php">Ir Ahora</a>
+                                <p><?=$titulo->nombre_titulo?></p>
 
-        </div>
+                                <a href="articuloVista.php?libroGet=<?php echo $titulo->id_libro?>&tituloGet=<?php echo $idTitulo?>">Ir Ahora</a>
 
-        <div>   
+                            </div>
+                    
+                        <?php
 
-            <p>Nombre Título</p>
+                    endif;
 
-            <a href="articuloVista.php">Ir Ahora</a>
+                endforeach;
 
-        </div>
+            }
 
-        <div>   
-
-            <p>Nombre Título</p>
-
-            <a href="articuloVista.php">Ir Ahora</a>
-
-        </div>
-
-        <div>   
-
-            <p>Nombre Título</p>
-
-            <a href="articuloVista.php">Ir Ahora</a>
-
-        </div>
+        endforeach;?>
 
     </section>
 

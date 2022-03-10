@@ -23,6 +23,8 @@
 
         <script src="../styles/js/index.js"></script>
 
+        <link rel="shortcut icon" href="../styles/images/logoSinTexto.png" type="image/x-icon">
+
     </head>
 
     <body>

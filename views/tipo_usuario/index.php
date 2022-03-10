@@ -2,7 +2,7 @@
 
     <link rel="stylesheet" href="../styles/css/index.css">
 
-    <title>Tipos de Usuarios</title>
+    <title>Código De Policía Ya! | Tipo de Usuario</title>
 
 </head>
 
