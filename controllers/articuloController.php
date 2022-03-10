@@ -10,7 +10,7 @@
 
         if($_SESSION['t_usuario']==1){
 
-            require('../views/templates/headerAdmin.php');
+            require('../views/templates/header.php');
 
             if($_SERVER["REQUEST_METHOD"]=="POST"){
 

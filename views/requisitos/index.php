@@ -12,7 +12,7 @@
 
         <h1>Requisitos | Inicio</h1>
 
-        <a href="requisitosController.php?accion=crear">+ Añadir Requisito</a>
+        <button><a href="requisitosController.php?accion=crear">+ Añadir Requisito</a></button>
 
         <br>
 
@@ -44,17 +44,17 @@
                     <td><?= $requisito->descripcion_requisito ?></td>
                     <td>
 
-                        <a href="requisitosController.php?accion=detalles&idRequisitos=<?=$requisito->id_requisito?>">Detalles</a>
-
+                        <button class="detalles"><a href="requisitosController.php?accion=detalles&idRequisitos=<?=$requisito->id_requisito?>">Detalles</a></button>
+                        
                     </td>
                     <td>
 
-                        <a href="requisitosController.php?accion=modificar&idRequisitos=<?=$requisito->id_requisito?>">Modificar</a>
-
+                        <button class="modificar"><a href="requisitosController.php?accion=modificar&idRequisitos=<?=$requisito->id_requisito?>">Modificar</a></button>
+                        
                     </td>
                     <td>
 
-                        <a href="requisitosController.php?accion=eliminar&idRequisitos=<?=$requisito->id_requisito?>">Eliminar</a>
+                        <button class="eliminar"><a href="requisitosController.php?accion=eliminar&idRequisitos=<?=$requisito->id_requisito?>">Eliminar</a></button>
 
                     </td>
                     

@@ -1,0 +1,120 @@
+.section1{
+
+    width: 100%;
+    min-height: 420px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+}
+
+.section1 > h1{
+
+    padding: 20px 30px;
+    margin: 30px 0;
+
+    width: 85%;
+
+    font-family: 'bebas neue';
+    font-size: 40pt;
+
+    border-bottom: 5px solid #0682efff;
+
+    color: #011627ff;
+
+}
+
+.section1 div{
+
+    margin-top: 30px;
+
+    padding: 5px 25px;
+
+    width: 80%;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: 15pt;
+
+    background-color: white;
+
+    border: 3px solid #011627ff;
+
+    color: #011627ff;
+
+    -webkit-box-shadow: 9px 12px 15px 0px rgba(0,0,0,0.44); 
+    box-shadow: 9px 12px 15px 0px rgba(0,0,0,0.44);
+
+}
+
+.section1 > div > a{
+
+    width: 150px;
+    height: 40px;
+    line-height: 40px;
+
+    background-color: #0682efff;
+    text-decoration: none;
+
+    text-align: center;
+
+    font-family: 'bebas neue';
+    font-size: 20pt;
+    
+    color: white;
+
+    border-radius: 10px;
+
+}
+
+.section1 p{
+
+    font-family: comfortaa;
+    font-size: 14pt;
+    font-weight: bolder;
+
+}
+
+.section2{
+
+    padding-bottom: 30px;
+
+    width: 100%;
+    height: 100px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+}
+
+.section2 button{
+
+    width: 150px;
+    height: 40px;
+
+    background-color: #011627ff;
+    border: #011627ff;
+
+    border-radius: 20px;
+
+}
+
+.section2 a{
+
+    font-family: 'bebas neue';
+    font-size: 20pt;
+
+    text-decoration: none;
+
+    color: white;
+
+}

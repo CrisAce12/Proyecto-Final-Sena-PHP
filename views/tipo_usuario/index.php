@@ -12,7 +12,7 @@
 
         <h1>Tipo de Usuario | Inicio</h1>
 
-        <a href="tipoUsuarioController.php?accion=crear">+ Añadir Tipo de Usuario</a>
+        <button><a href="tipoUsuarioController.php?accion=crear">+ Añadir Tipo de Usuario</a></button>
 
         <br>
 
@@ -42,18 +42,20 @@
                     <td><?= $tipo->nombre_tusuario ?></td>
                     <td>
 
-                        <a href="tipoUsuarioController.php?accion=detalles&idTipoUsuario=<?=$tipo->id_tusuario?>">Detalles</a>
+                        <button class="detalles"><a href="tipoUsuarioController.php?accion=detalles&idTipoUsuario=<?=$tipo->id_tusuario?>">Detalles</a></button>
+                        
 
                     </td>
                     <td>
 
-                        <a href="tipoUsuarioController.php?accion=modificar&idTipoUsuario=<?=$tipo->id_tusuario?>">Modificar</a>
+                        <button class="modificar"><a href="tipoUsuarioController.php?accion=modificar&idTipoUsuario=<?=$tipo->id_tusuario?>">Modificar</a></button>
+                        
 
                     </td>
                     <td>
 
-                        <a href="tipoUsuarioController.php?accion=eliminar&idTipoUsuario=<?=$tipo->id_tusuario?>">Eliminar</a>
-
+                        <button class="eliminar"><a href="tipoUsuarioController.php?accion=eliminar&idTipoUsuario=<?=$tipo->id_tusuario?>">Eliminar</a></button>
+                        
                     </td>
                     
 

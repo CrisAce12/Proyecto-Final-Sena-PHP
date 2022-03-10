@@ -12,7 +12,7 @@
 
         <h1>Libro | Inicio</h1>
 
-        <a href="libroController.php?accion=crear">+ Añadir Libro</a>
+        <button><a href="libroController.php?accion=crear">+ Añadir Libro</a></button>
 
         <br>
 
@@ -42,18 +42,18 @@
                     <td><?= $libro->nombre_libro ?></td>
                     <td>
 
-                        <a href="libroController.php?accion=detalles&idLibro=<?=$libro->id_libro?>">Detalles</a>
+                        <button class="detalles"><a href="libroController.php?accion=detalles&idLibro=<?=$libro->id_libro?>">Detalles</a></button>
 
                     </td>
                     <td>
 
-                        <a href="libroController.php?accion=modificar&idLibro=<?=$libro->id_libro?>">Modificar</a>
+                        <button class="modificar"><a href="libroController.php?accion=modificar&idLibro=<?=$libro->id_libro?>">Modificar</a></button>
 
                     </td>
                     <td>
-
-                        <a href="libroController.php?accion=eliminar&idLibro=<?=$libro->id_libro?>">Eliminar</a>
-
+                        
+                        <button class="eliminar"><a href="libroController.php?accion=eliminar&idLibro=<?=$libro->id_libro?>">Eliminar</a></button>
+                        
                     </td>
 
                 </tr>

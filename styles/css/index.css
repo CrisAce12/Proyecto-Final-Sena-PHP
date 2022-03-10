@@ -37,8 +37,8 @@ section > h1{
 
     padding-bottom: 20px;
 
-    font-size: 20pt;
-    font-family: Comfortaa;
+    font-size: 35pt;
+    font-family: 'bebas neue';
     font-weight: bold;
 
     text-decoration: underline #8dd35fff;
@@ -47,19 +47,28 @@ section > h1{
 
 }
 
-section > form > button{
+section > button{
 
     margin-bottom: 30px;
 
     width: 180px;
-    height: 30px;
+    height: 40px;
 
     font-family: comfortaa;
     font-weight: bolder;
 
-    border: 1px solid white;
+    border: 1px solid #011627ff;
     background-color: #011627ff;
 
+    border-radius: 10px;
+
+    color: white;
+
+}
+
+section > button > a {
+
+    text-decoration: none;
     color: white;
 
 }
@@ -118,20 +127,25 @@ tbody > tr > td{
 
 }
 
-tbody > tr > td > form > button{
+tbody > tr > td > button{
 
     height: 30px;
     width: 90%;
     
     font-family: comfortaa;
 
-    text-decoration: underline white;
-
     border: none;
 
     border-radius: 10px;
 
     color: white;
+
+}
+
+tbody tr td button a{
+
+    color: white;
+    text-decoration: none;
 
 }
 

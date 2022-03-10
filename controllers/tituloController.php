@@ -65,8 +65,6 @@
         
                 $accion = strval($_GET["accion"]);
         
-                echo $accion;
-        
                 if($accion == 'crear'){
         
                     $libros = $tituloDao->listarLibros();

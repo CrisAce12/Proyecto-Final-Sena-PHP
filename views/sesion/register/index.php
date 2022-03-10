@@ -1,46 +1,46 @@
+<head>
+
+    <link rel="stylesheet" href="../styles/css/register/register.css">
+
+</head>
+
 <main>
 
-    <section>
+    <section class="section1 section1Register">
+
+        <div class="registerImg"></div>
 
         <h1>Código de Policía Ya!</h1>
 
-        <h2>Registrarme</h2>
+        <h2>Registro de Usuario</h2>
 
-        <p>¿Ya tienes una cuenta?</p>
-
-        <a href="loginController.php">Iniciar Sesión</a>
-
-        <form action="registerController.php" method="POST">
+        <form class="registerForm" action="registerController.php" method="POST">
 
             <input type="text" name="accion" value="registrar" required hidden>
 
-            <label for="nombreUsuario">Ingrese su Nombre:</label>
-            <input type="text" name="nombreUsuario" required>
-            <br><br>   
+            <input type="text" name="nombreUsuario" required placeholder="Nombre de Usuario*">
 
-            <label for="correoUsuario">Ingrese su Correo:</label>
-            <input type="email" name="correoUsuario" required>
-            <br><br>    
+            <input type="email" name="correoUsuario" required placeholder="Correo Electrónico*">
 
-            <label for="correoUsuarioCONF">Confirme su Correo:</label>
-            <input type="email" name="correoUsuarioCONF" required>
-            <br><br>  
+            <input type="email" name="correoUsuarioCONF" required placeholder="Confirme su Correo Electrónico*">
 
-            <label for="contraseñaUsuario">Ingrese su Contraseña:</label>
-            <input type="password" name="contraseñaUsuario" required>
-            <br><br>  
+            <input type="password" name="contraseñaUsuario" required placeholder="Contraseña*">
 
-            <label for="contraseñaUsuarioCONF">Confirme su Contraseña:</label>
-            <input type="password" name="contraseñaUsuarioCONF" required>
-            <br><br>  
+            <input type="password" name="contraseñaUsuarioCONF" required placeholder="Confirme su Contraseña*">
             
-            <input type="checkbox" name="privacyPolicy" id="" required>
-            <label for="privacyPolicy">Acepto las políticas de privacidad.</label>
-            <br><br>  
+            <div>
+                
+                <input type="checkbox" name="privacyPolicy" id="" required>
+                <label for="privacyPolicy">Acepto las políticas de privacidad.</label>
+            
+            </div>
 
-            <input type="checkbox" name="updates" id="">
-            <label for="updates">Acepto recibir notificaciones del Código de Policía a mi correo.</label>
-            <br><br>  
+            <div>
+
+                <input type="checkbox" name="updates" id="">
+                <label for="updates">Acepto recibir notificaciones del Código de Policía a mi correo.</label>
+
+            </div>
 
             <button type="submit">Registrarme</button>
 

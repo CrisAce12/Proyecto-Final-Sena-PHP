@@ -12,7 +12,7 @@
 
         <h1>Título | Inicio</h1>
 
-        <a href="tituloController.php?accion=crear">+ Añadir Título</a>
+        <button><a href="tituloController.php?accion=crear">+ Añadir Título</a></button>
 
         <br>
 
@@ -60,17 +60,20 @@
                     </td>
                     <td>
 
-                        <a href="tituloController.php?accion=detalles&idTitulo=<?=$titulo->id_titulo?>">Detalles</a>
+                        <button class="detalles"><a href="tituloController.php?accion=detalles&idTitulo=<?=$titulo->id_titulo?>">Detalles</a></button>
+                        
 
                     </td>
                     <td>
 
-                        <a href="tituloController.php?accion=modificar&idTitulo=<?=$titulo->id_titulo?>">Modificar</a>
+                        <button class="modificar"><a href="tituloController.php?accion=modificar&idTitulo=<?=$titulo->id_titulo?>">Modificar</a></button>
+                        
 
                     </td>
                     <td>
 
-                        <a href="tituloController.php?accion=eliminar&idTitulo=<?=$titulo->id_titulo?>">Eliminar</a>
+                        <button class="eliminar"><a href="tituloController.php?accion=eliminar&idTitulo=<?=$titulo->id_titulo?>">Eliminar</a></button>
+                        
 
                     </td>
                     

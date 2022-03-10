@@ -69,7 +69,7 @@
                 }
                 elseif($accion == 'detalles'){
         
-                    $id_libro = $_POST['idLibro'];
+                    $id_libro = $_GET['idLibro'];
         
                     $libros = $libroDao->mostrarLibro($id_libro);
         
@@ -78,7 +78,7 @@
                 }
                 elseif($accion == 'modificar'){
         
-                    $id_libro = $_POST['idLibro'];
+                    $id_libro = $_GET['idLibro'];
         
                     $libros = $libroDao->mostrarLibro($id_libro);
         
@@ -87,7 +87,7 @@
                 }
                 else if($accion=="eliminar"){
         
-                    $id_libro = $_POST['idLibro'];
+                    $id_libro = $_GET['idLibro'];
         
                     $libroDao->borrarlibro($id_libro);
         

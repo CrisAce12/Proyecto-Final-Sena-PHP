@@ -1,26 +1,26 @@
+<head>
+
+    <link rel="stylesheet" href="../styles/css/register/register.css">
+
+</head>
+
 <main>
 
-    <section>
+    <section class="section1 section1Login">
+
+        <div class="registerImg"></div>
 
         <h1>Código de Policía Ya!</h1>
 
         <h2>Iniciar Sesión</h2>
 
-        <p>¿No tienes una cuenta?</p>
-
-        <a href="registerController.php">Registrarme</a>
-
-        <form action="loginController.php" method="POST">
+        <form class="loginForm" action="loginController.php" method="POST">
 
             <input type="text" name="accion" value="logear" required hidden>
 
-            <label for="correoUsuario">Ingrese su Correo:</label>
-            <input type="email" name="correoUsuario" required>
-            <br><br>  
+            <input type="email" name="correoUsuario" required placeholder="Correo Electrónico*">
 
-            <label for="contraseñaUsuario">Ingrese su Contraseña:</label>
-            <input type="password" name="contraseñaUsuario" required>
-            <br><br>   
+            <input type="password" name="contraseñaUsuario" required placeholder="Contraseña*">
 
             <button type="submit">Iniciar Sesión</button>
 

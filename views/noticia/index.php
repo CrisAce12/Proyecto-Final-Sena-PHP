@@ -12,7 +12,7 @@
 
         <h1>Noticia | Inicio</h1>
 
-        <a href="noticiaController.php?accion=crear">+ Añadir Noticia</a>
+        <button><a href="noticiaController.php?accion=crear">+ Añadir Noticia</a></button>
 
         <br>
 
@@ -106,17 +106,19 @@
                     </td>                    
                     <td>
 
-                        <a href="noticiaController.php?accion=detalles&idNoticia=<?=$noticia->id_noticia?>">Detalles</a>
+                        <button class="detalles"><a href="noticiaController.php?accion=detalles&idNoticia=<?=$noticia->id_noticia?>">Detalles</a></button>
+                        
 
                     </td>
                     <td>
 
-                        <a href="noticiaController.php?accion=modificar&idNoticia=<?=$noticia->id_noticia?>">Modificar</a>
+                        <button class="modificar"><a href="noticiaController.php?accion=modificar&idNoticia=<?=$noticia->id_noticia?>">Modificar</a></button>
+                        
 
                     </td>
                     <td>
 
-                        <a href="noticiaController.php?accion=eliminar&idNoticia=<?=$noticia->id_noticia?>">Eliminar</a>
+                        <button class="eliminar"><a href="noticiaController.php?accion=eliminar&idNoticia=<?=$noticia->id_noticia?>">Eliminar</a></button>
 
                     </td>
                     

@@ -1,0 +1,174 @@
+main{
+    
+    width: 100%;
+    min-height: 800px;
+    background-image: url("../../images/fongoLogin.png");
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-family: comfortaa;
+
+}
+
+.fondoLogin{
+
+    width: 100%;
+    min-height: 750px;
+
+}
+
+.section1Login{
+
+    padding: 50px;
+
+    width: 30%;
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+
+}
+
+.section1Register{
+
+    padding: 50px;
+
+    width: 30%;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+
+}
+
+.registerImg{
+
+    width: 100%;
+    height: 150px;
+
+    background-image: url("../../images/logoSinTexto.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+}
+
+.section1 h1{
+
+    font-family: 'bebas neue';
+    font-size: 28pt;
+
+    text-align: center;
+
+    color: #011627ff;
+
+}
+
+.section1 h2{
+
+    font-family: 'bebas neue';
+    font-size: 30pt;
+
+    color: #011627ff;
+
+    text-align: center;
+
+}
+
+.registerForm{
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+
+}
+
+.loginForm{
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-evenly;
+
+}
+
+.section1 input{
+
+    background-color: #011627ff;
+    border: none;
+
+    padding: 10px;
+
+    font-family: Comfortaa;
+
+    color: white;
+
+}
+
+.section1 input::placeholder{
+
+    font-family: Comfortaa;
+
+    color: white;
+
+}
+
+.section1 form div{
+
+    width: 90%;
+
+    display: flex;
+
+    align-items: center;
+
+    align-self: center;
+
+}
+
+form div > label{
+
+    margin-left: 10px;
+    font-family: arial;
+    font-size: 11pt;
+
+}
+
+.section1 form button{
+
+    width: 60%;
+    height: 40px;
+
+    align-self: center;
+
+    background-color: #8dd35fff;
+    border: 1px solid #8dd35fff;
+
+    font-family: 'bebas neue';
+    font-size: 20pt;
+
+    border-radius: 10px;
+
+}
+
+.section1 > a{
+
+    width: 50%;
+    text-align: center;
+
+    align-self: center;
+
+    font-size: 10.5pt;
+
+}

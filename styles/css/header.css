@@ -43,7 +43,7 @@ li > p {
 
 li{
 
-    min-width: 150px;
+    min-width: 130px;
 
     display: flex;
 
@@ -216,5 +216,25 @@ li > form > button{
 
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+
+}
+
+.navAdmin ul{
+
+    height: 30px;
+
+    background-color: #011627ff;
+
+}
+
+.navAdmin ul a{
+
+    font-size: 9pt;
+
+}
+
+.navAdmin ul p{
+
+    font-size: 9pt;
 
 }

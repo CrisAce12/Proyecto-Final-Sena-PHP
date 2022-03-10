@@ -57,7 +57,13 @@
 
                     <a class="nav-link" href="tramiteVista.php">Trámites</a>
 
-                </li>  
+                </li>
+                
+                <li>
+
+                    <a class="" href="requisitosVista.php">Requisitos</a>
+
+                </li>
 
                 <li>
 
@@ -122,5 +128,70 @@
             </div>
 
         </nav>
+
+        <?php if(isset($_SESSION['usuario'])&&$_SESSION['t_usuario']==1):?>
+
+
+
+            <nav class="navAdmin">
+            
+
+                <ul>
+
+                    <li><p>Enlaces Administrador:</p></li>
+
+                    <li>
+
+                        <a class="nav-link" href="libroController.php">Libros</a>
+
+                    </li>
+
+                    <li>
+
+                        <a class="nav-link" href="tituloController.php">Títulos</a>
+
+                    </li>
+
+                    <li>
+
+                        <a class="nav-link" href="articuloController.php">Artículos</a>
+
+                    </li>
+
+                    <li>
+
+                        <a class="nav-link" href="tramiteController.php">Trámites</a>
+
+                    </li>
+
+                    <li>
+
+                        <a class="" href="requisitosController.php">Requisitos</a>
+
+                    </li>
+
+                    <li>
+
+                        <a class="nav-link" href="noticiaController.php">Noticias</a>
+
+                    </li>
+
+                    <li>
+
+                        <a class="" href="tipoUsuarioController.php">Tipo de Usuario</a>
+
+                    </li>
+
+                    <li>
+
+                        <a class="" href="usuarioController.php">Usuarios</a>
+
+                    </li>
+
+                </ul>
+                
+            </nav>
+
+        <?php endif;?>
 
     </header>

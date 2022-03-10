@@ -12,7 +12,7 @@
 
         <h1>Trámites | Inicio</h1>
 
-        <a href="tramiteController.php?accion=crear">+ Añadir Trámite</a>
+        <button><a href="tramiteController.php?accion=crear">+ Añadir Trámite</a></button>
 
         <br>
 
@@ -80,17 +80,20 @@
                     </td>
                     <td>
 
-                        <a href="tramiteController.php?accion=detalles&idTramite=<?=$tramite->id_tramite?>">Detalles</a>
+                        <button class="detalles"><a href="tramiteController.php?accion=detalles&idTramite=<?=$tramite->id_tramite?>">Detalles</a></button>
+                        
 
                     </td>
                     <td>
 
-                        <a href="tramiteController.php?accion=modificar&idTramite=<?=$tramite->id_tramite?>">Modificar</a>
+                        <button class="modificar"><a href="tramiteController.php?accion=modificar&idTramite=<?=$tramite->id_tramite?>">Modificar</a></button>
+                        
 
                     </td>
                     <td>
 
-                        <a href="tramiteController.php?accion=eliminar&idTramite=<?=$tramite->id_tramite?>">Eliminar</a>
+                        <button class="eliminar"><a href="tramiteController.php?accion=eliminar&idTramite=<?=$tramite->id_tramite?>">Eliminar</a></button>
+                        
 
                     </td>
                     

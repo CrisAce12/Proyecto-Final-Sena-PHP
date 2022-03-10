@@ -12,7 +12,7 @@
 
         <h1>Artículo | Inicio</h1>
 
-        <a href="articuloController.php?accion=crear">+ Añadir Artículo</a>
+        <button><a href="articuloController.php?accion=crear">+ Añadir Artículo</a></button>
 
         <br>
 
@@ -103,18 +103,19 @@
 
                     </td>
                     <td>
-
-                        <a href="articuloController.php?accion=detalles&idArticulo=<?=$articulo->id_articulo?>">Detalles</a>
-
-                    </td>
-                    <td>
-
-                        <a href="articuloController.php?accion=modificar&idArticulo=<?=$articulo->id_articulo?>">Modificar</a>
+                        
+                        <button class="detalles"><a href="articuloController.php?accion=detalles&idArticulo=<?=$articulo->id_articulo?>">Detalles</a></button>
+                        
 
                     </td>
                     <td>
 
-                        <a href="articuloController.php?accion=eliminar&idArticulo=<?=$articulo->id_articulo?>">Eliminar</a>
+                        <button class="modificar"><a href="articuloController.php?accion=modificar&idArticulo=<?=$articulo->id_articulo?>">Modificar</a></button>
+
+                    </td>
+                    <td>
+
+                        <button class="eliminar"><a href="articuloController.php?accion=eliminar&idArticulo=<?=$articulo->id_articulo?>">Eliminar</a></button>
 
                     </td>
                     

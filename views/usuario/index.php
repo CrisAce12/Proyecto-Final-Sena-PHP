@@ -12,7 +12,7 @@
 
         <h1>Usuario | Inicio</h1>
 
-        <a href="usuarioController.php?accion=crear">+ Añadir Usuario</a>
+        <button><a href="usuarioController.php?accion=crear">+ Añadir Usuario</a></button>
 
         <table>
 
@@ -68,21 +68,21 @@
                     </td>
                     <td>
 
-                        <a href="usuarioController.php?accion=detalles&idUsuario=<?=$usuario->id_usuario?>">Detalles</a>
+                        <button class="detalles"><a href="usuarioController.php?accion=detalles&idUsuario=<?=$usuario->id_usuario?>">Detalles</a></button>
 
                     </td>
                     <td>
 
-                        <a href="usuarioController.php?accion=modificar&idUsuario=<?=$usuario->id_usuario?>">Modificar</a>
-
+                        <button class="modificar"><a href="usuarioController.php?accion=modificar&idUsuario=<?=$usuario->id_usuario?>">Modificar</a></button>
+                        
                     </td>
                     <td>
 
-                        <a href="usuarioController.php?accion=eliminar&idUsuario=<?=$usuario->id_usuario?>">Eliminar</a>
+                        <button class="eliminar"><a href="usuarioController.php?accion=eliminar&idUsuario=<?=$usuario->id_usuario?>">Eliminar</a></button>
+                        
 
                     </td>
                     
-
                 </tr>
 
                 <?php endforeach; ?>
