@@ -16,7 +16,6 @@
                 $this->estado = $arrayArticulo["estado"];
                 $this->idTitulo = $arrayArticulo["idTitulo"];
                 $this->idLibro = $arrayArticulo["idLibro"];
-
             }
             elseif(count($arrayArticulo)==6){
 
@@ -96,6 +95,7 @@
             $this->idLibro = $idLibro;
             return $this;
         }
+
     }
 
 ?>

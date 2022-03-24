@@ -45,110 +45,16 @@
 
             <table>
 
-                <tr>
+                <?php foreach($noticiasFavoritos as $noticiaFavorito):?>
 
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
+                    <tr>
 
-                </tr>
+                        <td><a href="noticiaVista.php">Noticia #<?=$noticiaFavorito->idUsuario?></a></td>
+                        <td><button><a class="eliminar" href="">Eliminar</a></button></td>
 
-                <tr>
+                    </tr>
 
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
-
-                <tr>
-
-                    <td><a href="">Ejemplo Favorito</a></td>
-                    <td><button><a class="eliminar" href="">Eliminar</a></button></td>
-
-                </tr>
+                <?php endforeach;?>
 
             </table>
 

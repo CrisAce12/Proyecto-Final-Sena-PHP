@@ -17,8 +17,6 @@
 
                 return $preparedStatement->fetchAll(PDO::FETCH_OBJ);
 
-                echo $preparedStatement;
-
             }catch(Exception $e){
 
                 $e->getMessage();

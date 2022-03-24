@@ -77,7 +77,7 @@
 
                 <div class="buttonsFaq">
 
-                    <button class="correoButton"><a href="" class="correoA">Enviar Correo</a></button>
+                    <button class="correoButton"><a href="correoController.php" class="correoA">Enviar Correo</a></button>
 
                     <button class="faqButton"><a href="" class="faqA">Preguntas Frecuentes</a></button>
 

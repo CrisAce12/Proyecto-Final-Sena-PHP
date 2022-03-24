@@ -8,7 +8,7 @@
 
         $accion = strval($_POST['accion']);
         
-        if($accion == 'buscar'){
+        if($accion == 'a'){
 
             
 

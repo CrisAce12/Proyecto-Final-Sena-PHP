@@ -154,6 +154,27 @@
 
         }
 
+        public function actualizarUsuarioHistorial($usuario){
+
+            try{
+
+                $connector = new DBConnector();
+                $connection = $connector->getConnection();
+
+                $id_usuario = $usuario->getIdUsuario();
+                $historial = $usuario->getHistorial();
+
+                $preparedStatement = $connection->prepare("UPDATE usuario SET historial = ? WHERE id_usuario = ?;");
+                $preparedStatement->execute([$historial,$id_usuario]); 
+
+            }catch(Exception $e){
+
+                $e->getMessage();
+
+            }
+
+        }
+
     }
 
 ?>

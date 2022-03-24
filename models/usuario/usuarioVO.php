@@ -3,7 +3,7 @@
     class Usuario{
 
         private int $idUsuario, $idTipoUsuario;
-        private string $nombre, $email, $contraseña;
+        private string $nombre, $email, $contraseña, $historial;
 
         public function __construct($arrayUsuario)
         {
@@ -94,6 +94,19 @@
             return $this;
             
         }
+
+        public function getHistorial()
+        {
+                return $this->historial;
+        }
+
+        public function setHistorial($historial)
+        {
+                $this->historial = $historial;
+
+                return $this;
+        }
+        
     }
 
 ?>

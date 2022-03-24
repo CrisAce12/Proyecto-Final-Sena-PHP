@@ -40,7 +40,7 @@
             <div>
 
                 <input type="checkbox" name="updates" id="">
-                <label for="updates">Acepto recibir notificaciones del Código de Policía a mi correo.</label>
+                <label for="updates">Acepto recibir notificaciones de CódigoPolicíaYa! en mi correo.</label>
 
             </div>
 

@@ -46,6 +46,7 @@
                             $_SESSION["usuario"] = $usuario->nombre;
                             $_SESSION["correo"] = $usuario->email;
                             $_SESSION["t_usuario"] = $usuario->id_tusuario;
+                            $_SESSION["idUsuario"] = $usuario->id_usuario;
                         };
 
                         header("Location:landingController.php");

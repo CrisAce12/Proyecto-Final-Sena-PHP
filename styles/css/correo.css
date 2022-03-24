@@ -1,0 +1,115 @@
+main{
+
+    width: 100%;
+    min-height: 800px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.section1{
+
+    width: 90%;
+    height: 600px;
+
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+
+}
+
+.section1 > h1{
+
+    font-family: 'Bebas Neue';
+    font-size: 40pt;
+
+    border-bottom: 7px solid #8dd35fff;
+
+    color: #011627ff;
+
+    margin-bottom: 40px;
+
+}
+
+.section1 > form{
+
+    padding: 30px;
+
+    width: 95%;
+    min-height: 300px;
+
+    align-self: center;
+
+    display: flex;
+    flex-direction: column;
+
+}
+
+.section1 > form > input{
+
+    padding: 10px;
+
+    width: 98.3%;
+    height: 30px;
+
+    margin-bottom: 10px;
+
+    background-color: #011627ff;
+    border: none;
+
+    font-family: comfortaa;
+
+    color: white;
+
+}
+
+.section1 > form > input::placeholder{
+
+    color: white;
+
+}
+
+.section1 > form > textarea{
+
+    padding: 10px;
+
+    width: 98.3%;
+
+    font-family: comfortaa;
+
+    background-color: #011627ff;
+
+    color: white;
+
+    margin-bottom: 20px;
+
+}
+
+.section1 > form > textarea::placeholder{
+
+    color: white;
+
+}
+
+.section1 > form > button{
+
+    padding: 20px;
+
+    width: 100%;
+
+    align-self: center;
+
+    background-color: #8dd35fff;
+    border: none;
+
+    font-family: 'Bebas Neue';
+    font-size: 25pt;
+
+    color: #011627ff;
+
+    border-radius: 20px;
+
+}
