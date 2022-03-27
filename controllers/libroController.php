@@ -106,6 +106,11 @@
         
             }
 
+            require('../models/historial/historialDAO.php');
+            $historialDao = new HistorialDao();
+
+            $historialDao->InsertarHistorial($_SESSION["idUsuario"],"Gestionar Libros | Rol Administrador");
+
         }
         else{
 

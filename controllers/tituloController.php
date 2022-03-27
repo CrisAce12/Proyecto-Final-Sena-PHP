@@ -115,6 +115,11 @@
         
             }
 
+            require('../models/historial/historialDAO.php');
+            $historialDao = new HistorialDao();
+
+            $historialDao->InsertarHistorial($_SESSION["idUsuario"],"Gestionar Títulos | Rol Administrador");
+
         }else{
 
             header('Location:landingController.php');

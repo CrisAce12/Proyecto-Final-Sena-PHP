@@ -11,6 +11,14 @@
     $titulos = $articuloDao->listarTitulos();
     $libros = $articuloDao->listarLibros();
 
+    if(isset($_SESSION["idUsuario"])){
+
+        require('../models/historial/historialDAO.php');
+        $historialDao = new HistorialDao();
+
+        $historialDao->InsertarHistorial($_SESSION["idUsuario"],"Artículos");
+
+    }
 
     require('../views/articulo/indexUsuario.php');
 

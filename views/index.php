@@ -73,13 +73,11 @@
 
                 <h1>¿Quedaste con Dudas?</h1>
 
-                <p>Revisa la sección de preguntas frecuentes o envianos un correo a ejemplo@gmail.com</p>
+                <p>Envianos un correo a ejemplo@gmail.com presionando el botón "Enviar Correo"</p>
 
                 <div class="buttonsFaq">
 
                     <button class="correoButton"><a href="correoController.php" class="correoA">Enviar Correo</a></button>
-
-                    <button class="faqButton"><a href="" class="faqA">Preguntas Frecuentes</a></button>
 
                 </div>                
 

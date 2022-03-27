@@ -108,6 +108,11 @@
         
             }
 
+            require('../models/historial/historialDAO.php');
+            $historialDao = new HistorialDao();
+
+            $historialDao->InsertarHistorial($_SESSION["idUsuario"],"Gestionar Requisitos | Rol Administrador");
+
         }else{
 
             header('Location:landingController.php');

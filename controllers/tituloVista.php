@@ -10,6 +10,15 @@
     $titulos = $tituloDao->listarTitulos();
     $libros = $tituloDao->listarLibros();
 
+    if(isset($_SESSION["idUsuario"])){
+
+        require('../models/historial/historialDAO.php');
+        $historialDao = new HistorialDao();
+
+        $historialDao->InsertarHistorial($_SESSION["idUsuario"],"Títulos");
+
+    }
+
     require('../views/titulo/indexUsuario.php');
 
 

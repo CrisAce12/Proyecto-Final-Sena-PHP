@@ -11,6 +11,15 @@
     $articulos = $noticiaDao->listarArticulos();
     $tramites = $noticiaDao->listarTramites();
 
+    if(isset($_SESSION["idUsuario"])){
+
+        require('../models/historial/historialDAO.php');
+        $historialDao = new HistorialDao();
+
+        $historialDao->InsertarHistorial($_SESSION["idUsuario"],"Noticias");
+
+    }
+
     require('../views/noticia/indexUsuario.php');
 
 

@@ -134,6 +134,11 @@
         
             }
 
+            require('../models/historial/historialDAO.php');
+            $historialDao = new HistorialDao();
+
+            $historialDao->InsertarHistorial($_SESSION["idUsuario"],"Gestionar Artículos | Rol Administrador");
+
         }
         else{
 

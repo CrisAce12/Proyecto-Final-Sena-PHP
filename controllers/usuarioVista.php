@@ -3,19 +3,31 @@
     session_start();
 
     require('../models/usuario/usuarioDAO.php');
+
+    //DAOs Favoritos
+
     require('../models/favoritos/noticiasFavoritosDAO.php');
     require('../models/favoritos/tramitesFavoritosDAO.php');
     require('../models/favoritos/articulosFavoritosDAO.php');
+
+    //DAO Historial
+
+    require('../models/historial/historialDAO.php');
+
     require('../views/templates/header.php');
 
     $usuarioDao = new UsuarioDao();
+
     $articulosFavoritosDao = new ArticuloFavoritoDao();
     $tramitesFavoritosDao = new TramiteFavoritoDao();
     $noticiasFavoritosDao = new NoticiaFavoritoDao();
+    $historialDao = new HistorialDao();
+
 
     $articulosFavoritos = $articulosFavoritosDao->ListarFavoritos($_SESSION['idUsuario']);
     $tramitesFavoritos = $tramitesFavoritosDao->ListarFavoritos($_SESSION['idUsuario']);
     $noticiasFavoritos = $noticiasFavoritosDao->ListarFavoritos($_SESSION['idUsuario']);
+    $historial = $historialDao->ListarHistorial($_SESSION['idUsuario']);
     $usuarios = $usuarioDao->listarUsuarios();
     $roles = $usuarioDao->listarTiposUsuario();
 

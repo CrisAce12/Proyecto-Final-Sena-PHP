@@ -18,7 +18,7 @@
 
             <div>
 
-                <h1><?=$requisito->nombre_requisito?></h1>
+                <div class="divFavorito"><h1><?=$requisito->nombre_requisito?></h1></div>
 
                 <p><?=$requisito->descripcion_requisito?></p>
 

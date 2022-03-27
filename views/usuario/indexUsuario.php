@@ -88,29 +88,75 @@
 
             <table>
 
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
-                <tr><td><a href="">Ejemplo Historial</a></td></tr>
                 
+                
+                <?php foreach($historial as $historial):?>
+
+                    <tr><td><a href="
+                    
+                    <?php switch ($historial->url) {
+                        
+                        case 'Mi Cuenta':    
+                            ?>usuarioVista.php<?php
+                            break;
+
+                        case 'Artículos':    
+                            ?>libroVista.php<?php
+                            break;
+
+                        case 'Libros':    
+                            ?>libroVista.php<?php
+                            break;
+
+                        case 'Títulos':    
+                            ?>libroVista.php<?php
+                            break;
+
+                        case 'Trámites':    
+                            ?>tramiteVista.php<?php
+                            break;
+
+                        case 'Requisitos':    
+                            ?>requisitosVista.php<?php
+                            break;
+
+                        case 'Noticias':    
+                            ?>noticiaVista.php<?php
+                            break;
+
+                        case 'Gestionar Libros | Rol Administrador':    
+                            ?>libroController.php<?php
+                            break;
+
+                        case 'Gestionar Títulos | Rol Administrador':    
+                            ?>tituloController.php<?php
+                            break;
+
+                        case 'Gestionar Artículos | Rol Administrador':    
+                            ?>articuloController.php<?php
+                            break;
+
+                        case 'Gestionar Requisitos | Rol Administrador':    
+                            ?>requisitosController.php<?php
+                            break;
+
+                        case 'Gestionar Noticias | Rol Administrador':    
+                            ?>noticiaController.php<?php
+                            break;
+
+                        case 'Gestionar Roles | Rol Administrador':    
+                            ?>tipoUsuarioController.php<?php
+                            break;
+
+                        case 'Gestionar Usuario | Rol Administrador':    
+                            ?>usuarioVista.php<?php
+                            break;
+
+                    }?>
+                    
+                    "><?=$historial->url?></a></td></tr>
+
+                <?php endforeach;?>
 
             </table>
 
