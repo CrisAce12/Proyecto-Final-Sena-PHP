@@ -154,18 +154,29 @@
 
         }
 
-        public function actualizarUsuarioHistorial($usuario){
+        public function revisarDuplicado($usuario){
 
             try{
 
                 $connector = new DBConnector();
                 $connection = $connector->getConnection();
 
-                $id_usuario = $usuario->getIdUsuario();
-                $historial = $usuario->getHistorial();
+                $email = $usuario->getEmail();
 
-                $preparedStatement = $connection->prepare("UPDATE usuario SET historial = ? WHERE id_usuario = ?;");
-                $preparedStatement->execute([$historial,$id_usuario]); 
+                $preparedStatement = $connection->prepare("SELECT * FROM usuario WHERE email = ?;");
+                $preparedStatement->execute([$email]);
+                
+                $duplicados = $preparedStatement->fetchAll(PDO::FETCH_OBJ);
+
+                $i = 0;
+
+                foreach($duplicados as $duplicado){
+
+                    $i++;
+
+                }
+
+                return $i;
 
             }catch(Exception $e){
 

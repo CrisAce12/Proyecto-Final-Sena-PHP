@@ -20,15 +20,15 @@
 
             <input type="text" name="accion" value="registrar" required hidden>
 
-            <input type="text" name="nombreUsuario" required placeholder="Nombre de Usuario*">
+            <input type="text" name="nombreUsuario" required placeholder="Nombre de Usuario*" minlength="3" maxlength="30">
 
-            <input type="email" name="correoUsuario" required placeholder="Correo Electrónico*">
+            <input type="email" name="correoUsuario" required placeholder="Correo Electrónico*" minlength="3" maxlength="30">
 
-            <input type="email" name="correoUsuarioCONF" required placeholder="Confirme su Correo Electrónico*">
+            <input type="email" name="correoUsuarioCONF" required placeholder="Confirme su Correo Electrónico*" minlength="3" maxlength="30">
 
-            <input type="password" name="contraseñaUsuario" required placeholder="Contraseña*">
+            <input type="password" name="contraseñaUsuario" required placeholder="Contraseña*" minlength="3" maxlength="15">
 
-            <input type="password" name="contraseñaUsuarioCONF" required placeholder="Confirme su Contraseña*">
+            <input type="password" name="contraseñaUsuarioCONF" required placeholder="Confirme su Contraseña*" minlength="3" maxlength="15">
             
             <div>
                 
@@ -37,18 +37,11 @@
             
             </div>
 
-            <div>
-
-                <input type="checkbox" name="updates" id="">
-                <label for="updates">Acepto recibir notificaciones de CódigoPolicíaYa! en mi correo.</label>
-
-            </div>
-
             <button type="submit">Registrarme</button>
 
         </form>
 
-        <a href="landingController.php?accion=privacidad">Ver Política de Privacidad</a>
+        <a href="https://www.privacypolicies.com/live/d39d2042-e68d-452e-bdb6-d3a9b6c9fa8b">Ver Política de Privacidad</a>
 
     </section>
 

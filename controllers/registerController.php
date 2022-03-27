@@ -24,20 +24,39 @@
             }
             elseif($accion="registrar"){
 
-                $arrayUsuario = array(
-        
-                    "nombreUsuario" => $_POST["nombreUsuario"],
-                    "emailUsuario" => $_POST["correoUsuario"],
-                    "contraseñaUsuario" => $_POST["contraseñaUsuario"],
-                    "idTipoUsuario" => 2
-        
-                );
-        
-                $usuario = new Usuario($arrayUsuario);
-        
-                $usuarioDao->insertarUsuario($usuario);
+                if($_POST["correoUsuario"]==$_POST["correoUsuarioCONF"]&&$_POST["contraseñaUsuario"]==$_POST["contraseñaUsuarioCONF"]){
 
-                header('Location:landingController.php');
+                    $arrayUsuario = array(
+        
+                        "nombreUsuario" => $_POST["nombreUsuario"],
+                        "emailUsuario" => $_POST["correoUsuario"],
+                        "contraseñaUsuario" => $_POST["contraseñaUsuario"],
+                        "idTipoUsuario" => 2
+            
+                    );
+            
+                    $usuario = new Usuario($arrayUsuario);
+    
+                    $i = $usuarioDao->revisarDuplicado($usuario);
+    
+                    if($i == 0){
+    
+                        $usuarioDao->insertarUsuario($usuario);
+    
+                        header('Location:landingController.php');
+    
+                    }else{
+    
+                        header('Location:landingController.php');
+    
+                    }
+
+                }
+                else{
+
+                    header("Location:registerController.php");
+
+                }
     
             }
             else{
