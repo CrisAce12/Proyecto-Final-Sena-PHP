@@ -49,8 +49,30 @@
 
                     <tr>
 
-                        <td><a href="noticiaVista.php">Noticia #<?=$noticiaFavorito->idUsuario?></a></td>
-                        <td><button><a class="eliminar" href="">Eliminar</a></button></td>
+                        <td><a href="noticiaVista.php">Noticia #<?=$noticiaFavorito->idNoticia?></a></td>
+                        <td><button><a class="eliminar" href="usuarioVista.php?accion=borrarFavorito&idNoticia=<?=$noticiaFavorito->idNoticia?>">Eliminar</a></button></td>
+
+                    </tr>
+
+                <?php endforeach;?>
+
+                <?php foreach($articulosFavoritos as $articuloFavorito):?>
+
+                    <tr>
+
+                        <td><a href="libroVista.php">Artículo #<?=$articuloFavorito->idArticulo?></a></td>
+                        <td><button><a class="eliminar" href="usuarioVista.php?accion=borrarFavorito&idArticulo=<?=$articuloFavorito->idArticulo?>">Eliminar</a></button></td>
+
+                    </tr>
+
+                <?php endforeach;?>
+
+                <?php foreach($tramitesFavoritos as $tramiteFavorito):?>
+
+                    <tr>
+
+                        <td><a href="tramiteVista.php">Trámite #<?=$tramiteFavorito->idTramite?></a></td>
+                        <td><button><a class="eliminar" href="usuarioVista.php?accion=borrarFavorito&idTramite=<?=$tramiteFavorito->idTramite?>">Eliminar</a></button></td>
 
                     </tr>
 

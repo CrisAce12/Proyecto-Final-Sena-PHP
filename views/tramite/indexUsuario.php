@@ -17,9 +17,19 @@
 
             <div>
 
-            <h1><?=$tramite->nombre_tramite?></h1>
+                <div class="divFavorito">
 
-            <p><?=$tramite->texto_tramite?></p>
+                    <h1><?=$tramite->nombre_tramite?></h1>
+
+                    <?php if(isset($_SESSION["usuario"])):?>
+
+                        <button type="submit"><a href="usuarioVista.php?accion=insertarFavorito&idTramite=<?=$tramite->id_tramite?>">&#9829; Añadir A Favoritos</a></button>                    
+
+                    <?php endif;?>
+
+                </div>
+
+                <p><?=$tramite->texto_tramite?></p>
 
             </div>
 

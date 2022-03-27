@@ -86,7 +86,20 @@ hr{
 
 }
 
-.section1 > div > h1{
+.divFavorito{
+
+    display: flex;
+
+    width: 100%;
+
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+}
+
+.divFavorito > h1{
 
     padding: 10px 0;
 
@@ -97,9 +110,45 @@ hr{
 
     color: #011627ff;
 
+    border-bottom: 3px solid #0682efff;
+
+}
+
+.divFavorito > button{
+
+    padding: 10px;
+
+    font-family: comfortaa;
+    font-size: 10pt;
+
     margin-bottom: 30px;
 
-    border-bottom: 3px solid #0682efff;
+    background-color: #ff8080ff;
+
+    border: 2px solid #ff8080ff;
+
+    border-radius: 10px;
+
+}
+
+.divFavorito > button:hover{
+
+    background-color: white;
+
+    border: 2px solid #ff8080ff;
+
+}
+
+.divFavorito > button > a{
+
+    color: white;
+    text-decoration: none;
+
+}
+
+.divFavorito > button > a:hover{
+
+    color: #ff8080ff;
 
 }
 

@@ -29,9 +29,19 @@
                 
                         <div>
 
-                        <h1><?=$articulo->nombre_articulo?></h1>
+                            <div class="divFavorito">
+                                
+                                <h1><?=$articulo->nombre_articulo?></h1>
 
-                        <p><?=$articulo->texto_articulo?></p>
+                                <?php if(isset($_SESSION["usuario"])):?>
+
+                                    <button type="submit"><a href="usuarioVista.php?accion=insertarFavorito&idArticulo=<?=$articulo->id_articulo?>">&#9829; Añadir A Favoritos</a></button>                    
+
+                                <?php endif;?>
+
+                            </div>
+
+                            <p><?=$articulo->texto_articulo?></p>
 
                         </div>
                 

@@ -25,15 +25,12 @@
 
         }
 
-        public function InsertarFavorito($articuloFavorito){
+        public function InsertarFavorito($idUsuario,$idArticulo){
 
             try{
 
                 $connector = new DBConnector();
                 $connection = $connector->getConnection();
-
-                $idUsuario = $articuloFavorito->getIdUsuario();
-                $idArticulo = $articuloFavorito->getIdArticulo();
 
                 $preparedStatement = $connection->prepare("INSERT INTO articuloFavoritos (idUsuario,idArticulo) VALUES ( ?,? );");
                 $preparedStatement->execute([$idUsuario,$idArticulo]);   
@@ -46,15 +43,15 @@
 
         }
 
-        public function BorrarFavorito(int $idArticulo){
+        public function BorrarFavorito($idUsuario,$idArticulo){
 
             try{
 
                 $connector = new DBConnector();
                 $connection = $connector->getConnection();
 
-                $preparedStatement = $connection->prepare("DELETE FROM articuloFavoritos WHERE idArticulo = ?;");
-                $preparedStatement->execute([$idArticulo]); 
+                $preparedStatement = $connection->prepare("DELETE FROM articuloFavoritos WHERE idArticulo = ? AND idUsuario = ?;");
+                $preparedStatement->execute([$idArticulo,$idUsuario]); 
 
             }catch(Exception $e){
 

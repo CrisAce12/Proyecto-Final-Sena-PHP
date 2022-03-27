@@ -33,8 +33,6 @@
 
         <nav>
 
-            
-
             <ul>
 
                 <li>
@@ -70,20 +68,6 @@
                 <li>
 
                     <a class="nav-link" href="noticiaVista.php">Noticias</a>
-
-                </li>
-
-                <li>
-
-                    <form action="landingController.php" method="POST" class="busqueda">
-
-                        <input type="text" id="accion" name="accion" value="buscar" hidden>
-                        
-                        <input type="text" name="busqueda" id="busqueda">
-
-                        <button type="submit">Buscar</button>
-
-                    </form>
 
                 </li>
 

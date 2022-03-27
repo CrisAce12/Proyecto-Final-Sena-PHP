@@ -21,7 +21,73 @@
 
     if(isset($_SESSION['usuario'])){
 
-        require('../views/usuario/indexUsuario.php');
+        $accion = $_GET["accion"];
+
+        if(isset($_GET["idNoticia"])){
+
+            $idNoticia = $_GET["idNoticia"];
+
+            if($accion == "insertarFavorito"){
+                
+                $noticiasFavoritosDao->InsertarFavorito($_SESSION["idUsuario"],$idNoticia);
+    
+                header('Location:noticiaVista.php');
+    
+            }
+            elseif($accion == "borrarFavorito"){
+    
+                $noticiasFavoritosDao->BorrarFavorito($idNoticia,$_SESSION["idUsuario"]);
+    
+                header('Location:usuarioVista.php');
+    
+            }
+
+        }
+        elseif(isset($_GET["idArticulo"])){
+
+            $idArticulo = $_GET["idArticulo"];
+
+            if($accion == "insertarFavorito"){
+                
+                $articulosFavoritosDao->InsertarFavorito($_SESSION["idUsuario"],$idArticulo);
+    
+                header('Location:libroVista.php');
+    
+            }
+            elseif($accion == "borrarFavorito"){
+    
+                $articulosFavoritosDao->BorrarFavorito($_SESSION["idUsuario"],$idArticulo);
+    
+                header('Location:usuarioVista.php');
+    
+            }
+
+        }
+        elseif(isset($_GET["idTramite"])){
+
+            $idTramite = $_GET["idTramite"];
+
+            if($accion == "insertarFavorito"){
+                
+                $tramitesFavoritosDao->InsertarFavorito($_SESSION["idUsuario"],$idTramite);
+    
+                header('Location:tramiteVista.php');
+    
+            }
+            elseif($accion == "borrarFavorito"){
+    
+                $tramitesFavoritosDao->BorrarFavorito($_SESSION["idUsuario"],$idTramite);
+    
+                header('Location:usuarioVista.php');
+    
+            }
+
+        }
+        else{
+
+            require('../views/usuario/indexUsuario.php');
+
+        }
 
     }
     else{
